@@ -26,8 +26,9 @@ gap 50 10 10 10
 # keybinds
 bind 4S-q          quit
 bind 4C-q          restart
-bind 4-s           search
-bind 4-e           exec
+bind 4-w           search
+bind 4-r           exec
+bind 4-s           ssh
 
 bind 4C-1          group1
 bind 4C-2          group2
