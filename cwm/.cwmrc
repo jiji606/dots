@@ -1,0 +1,108 @@
+# behaviour
+sticky yes
+snapdist 5
+moveamount 10
+
+# autogroup
+
+ignore tint2
+
+# appearance
+borderwidth 2
+color groupborder "#000000"
+color activeborder "#333333"
+color inactiveborder "#111111"
+color urgencyborder "#ff4444"
+color ungroupborder "#121212"
+color font "#555555"
+color selfont "#E8EAEC"
+color menubg "#111111"
+color menufg "#333333"
+fontname "Iosevka:size=8"
+
+gap 50 10 10 10
+
+# keybinds
+bind 4S-q		quit
+bind 4C-q		restart
+bind 4-s		search
+bind 4-e		exec
+
+bind 4C-1		group1
+bind 4C-2		group2
+bind 4C-3		group3
+bind 4C-4		group4
+bind 4C-5		group5
+bind 4C-6		group6
+bind 4C-7		group7
+bind 4C-8		group8
+bind 4C-9		group9
+bind 4C-0		group10
+
+bind 4-1		grouponly1
+bind 4-2		grouponly2
+bind 4-3		grouponly3
+bind 4-4		grouponly4
+bind 4-5		grouponly5
+bind 4-6		grouponly6
+bind 4-7		grouponly7
+bind 4-8		grouponly8
+bind 4-9		grouponly9
+bind 4-0		grouponly10
+
+bind 4S-1		movetogroup1
+bind 4S-2		movetogroup2
+bind 4S-3		movetogroup3
+bind 4S-4		movetogroup4
+bind 4S-5		movetogroup5
+bind 4S-6		movetogroup6
+bind 4S-7		movetogroup7
+bind 4S-8		movetogroup8
+bind 4S-9		movetogroup9
+bind 4S-0		movetogroup10
+
+bind 4-Tab		cycle
+bind 4S-Tab		rcycle
+bind 4-q		delete
+bind 4-x		raise
+bind 4-z		lower
+bind 4-KP_Begin	maximize
+bind 4-m		maximize
+bind 4S-m		hmaximize
+bind 4C-m		vmaximize
+bind 4S-t		htile
+bind 4C-t		vtile
+
+bind 4S-h		moveleft
+bind 4S-j		movedown
+bind 4S-k		moveup
+bind 4S-l		moveright
+
+bind 4-h		bigmoveleft
+bind 4-j		bigmovedown
+bind 4-k		bigmoveup
+bind 4-l		bigmoveright
+
+bind 4C-h		resizeleft
+bind 4C-j		resizedown
+bind 4C-k		resizeup
+bind 4C-l		resizeright
+
+# mousebinds
+mousebind 4-1		window_move
+mousebind 4-2		window_lower
+mousebind 4-3		window_resize
+
+# menu
+command "term"		st
+command " 9term"		"9term -f /home/jj/.fonts/plan9fonts/6x12/6x12.font 9 rc"
+command " nvim"		"st -name vim -e nvim"
+command " weechat"	"st -name weechat -e weechat"
+command " ncmpcpp"	"st -e ncmpcpp"
+command " acme"		"acme -f /home/jj/.fonts/plan9fonts/tamsyn/tamsyn14.font"
+command " firefox"	firefox
+command " warsow"	warsow
+command """"
+command "lock"		lock
+command " reboot"	"poweroff -r now"
+command " shutdown"	"poweroff -h now"
