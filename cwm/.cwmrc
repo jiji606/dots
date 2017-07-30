@@ -104,15 +104,9 @@ bind CS-Down        unmap
 bind CS-Up          unmap
 
 # menu
-command "term"		st
-command " 9term"		"9term -f /home/jj/.fonts/plan9fonts/6x12/6x12.font 9 rc"
-command " nvim"		"st -name vim -e nvim"
-command " weechat"	"st -name weechat -e weechat"
-command " ncmpcpp"	"st -e ncmpcpp"
-command " acme"		"acme -f /home/jj/.fonts/plan9fonts/tamsyn/tamsyn14.font"
-command " firefox"	firefox
-command " warsow"	warsow
-command """"
-command "lock"		lock
-command " reboot"	"poweroff -r now"
-command " shutdown"	"poweroff -h now"
+command "term"     "konsole"
+command "web"      "chromium"
+command "files"    "dolphin"
+command "lock"     "i3lock -c 000000"
+command "reboot"   "systemctl reboot"
+command "shutdown" "systemctl poweroff"
