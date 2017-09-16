@@ -1,0 +1,62 @@
+super + Return
+	konsole
+
+super + e
+	lock -p
+
+super + KP_Home
+	tile -q 1
+
+super + KP_End
+	tile -q 2
+
+super + KP_Prior
+	tile -q 3
+
+super + KP_Next
+	tile -q 4
+
+super + KP_Left
+	tile -h left
+
+super + KP_Down
+	tile -h down
+
+super + KP_Up
+	tile -h up
+
+super + KP_Right
+	tile -h right
+
+XF86AudioRaiseVolume
+	amixer set Master 5000+ &\
+	volume
+
+XF86AudioLowerVolume
+	amixer set Master 5000- &\
+	volume
+
+XF86AudioMute
+	amixer set Master toggle &\
+	volume
+
+XF86AudioPlay
+	mpc toggle
+
+XF86AudioNext
+	mpc next
+
+XF86AudioPrev
+	mpc prev
+
+XF86AudioStop
+	mpc stop
+
+XF86Back
+	xdotool click 5
+
+XF86Forward
+	xdotool click 4
+
+super + Escape
+	pkill -USR1 -x sxhkd
