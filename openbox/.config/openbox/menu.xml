@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openbox_menu xmlns="http://openbox.org/3.4/menu">
+	<menu id="root-menu" label="menu">
+		<separator label="menu      "/>
+
+		<item label="term">
+			<action name="Execute">
+				<execute>konsole</execute>
+			</action>
+		</item>
+
+		<item label="irc">
+			<action name="Execute">
+				<execute>konsole -e weechat</execute>
+			</action>
+		</item>
+
+		<item label="nvim">
+			<action name="Execute">
+				<execute>konsole -name vim -e nvim</execute>
+			</action>
+		</item>
+
+		<item label="web">
+			<action name="Execute">
+				<execute>chromium</execute>
+			</action>
+		</item>
+
+		<item label="ncmpcpp">
+			<action name="Execute">
+				<execute>konsole -e ncmpcpp</execute>
+			</action>
+		</item>
+
+		<item label="warsow">
+			<action name="Execute">
+				<execute>warsow</execute>
+			</action>
+		</item>
+
+		<menu id="root-menu-ssh" label="ssh" execute="/home/common/scripts/openbox_menus/ssh-menu.sh"/>
+
+		<menu id="root-menu-music" label="music" execute="/home/common/scripts/openbox_menus/mpd-menu.sh"/>
+
+		<menu id="root-menu-3" label="system">
+			<separator label="settings"/>
+			
+			<item label="htop">
+				<action name="Execute">
+					<execute>konsole -e htop</execute>
+				</action>
+			</item>
+
+			<item label="dolphin">
+				<action name="Execute">
+					<execute>dolphin</execute>
+				</action>
+			</item>
+
+			<item label="toggle compositing">
+				<action name="Execute">
+					<execute>/home/common/scripts/toggle-compositing.sh</execute>
+				</action>
+			</item>
+
+			<menu id="root-menu-3-network-menu" label="network" execute="/home/common/scripts/openbox_menus/network-menu.sh"/>
+
+			<menu id="root-menu-3-themes-menu" label="themes" execute="/home/common/scripts/openbox_menus/theme-menu.sh"/>
+
+			<menu id="root-menu-3-1" label="settings">
+
+				<item label="obapps">
+					<action name="Execute">
+						<execute>obapps</execute>
+					</action>
+				</item>
+
+				<item label="obkeys">
+					<action name="Execute">
+						<execute>obkey</execute>
+					</action>
+				</item>
+
+				<item label="obmenu">
+					<action name="Execute">
+						<execute>obmenu</execute>
+					</action>
+				</item>
+
+				<item label="obconf">
+					<action name="Execute">
+						<execute>obconf-qt</execute>
+					</action>
+				</item>
+
+				<item label="arandr">
+					<action name="Execute">
+						<execute>arandr</execute>
+					</action>
+				</item>
+
+				<item label="gtk2">
+					<action name="Execute">
+						<execute>lxappearance</execute>
+					</action>
+				</item>
+
+				<item label="tint2">
+					<action name="Execute">
+						<execute>tint2conf</execute>
+					</action>
+				</item>
+
+			</menu>
+			<separator/>
+
+			<item label="reload openbox">
+				<action name="Execute">
+					<execute>openbox --reconfigure</execute>
+				</action>
+			</item>
+
+			<item label="restart openbox">
+				<action name="Execute">
+					<execute>openbox --restart</execute>
+				</action>
+			</item>
+
+		</menu>
+		<separator/>
+
+		<item label="lock">
+			<action name="Execute">
+				<execute>i3lock -c 000000</execute>
+			</action>
+		</item>
+
+		<item label="exit">
+			<action name="Execute">
+				<execute>oblogout</execute>
+			</action>
+		</item>
+
+	</menu>
+</openbox_menu>
