@@ -1,0 +1,64 @@
+alias vim='nvim'
+alias ll='ls -hal'
+alias ls='ls -v --color=auto --group-directories-first --block-size=M --quoting-style=literal'
+alias llb='lsblk -o SIZE,NAME,LABEL,MOUNTPOINT,FSTYPE,UUID'
+alias ll='ls -la'
+alias mv='mv -v'
+alias info='info --vi-keys'
+alias dd='dd status=progress'
+alias pacman='pacman --color auto'
+alias mystyle="astyle -A2 \
+--indent=force-tab=8 \
+-C \
+-xG \
+-S \
+-Y \
+-m0 \
+-f \
+-H \
+-U \
+-xe \
+-E \
+-j \
+-xL \
+-q \
+--lineend=linux"
+alias checkkeysyms="xev | sed -n 's/^.*keycode *\([0-9]\+\).*$/keycode \1 = /p'"
+alias grep='grep --color=auto'
+alias tmux='tmux -2'
+alias mvim='nvim -u $HOME/.config/nvim/minivim.vim'
+alias govim='nvim -u $HOME/.config/nvim/govim.vim'
+alias govim_config='govim $HOME/.config/nvim/govim.vim'
+alias mvim_config='mvim $HOME/.config/nvim/minivim.vim'
+alias vim_config='vim $HOME/.config/nvim/init.vim'
+alias rm='rm -i'
+
+function mkcd {
+	mkdir "$1"
+	cd "$1"
+}
+function cds {
+	cd "$1"
+	ls
+}
+function launch {
+	"$@" 2>/dev/null & disown
+}
+function bak {
+	cp -r "$1" "$1".bak
+}
+function lsza {
+	for f in ./* ; do
+		du -sh $f
+	done
+}
+
+PATH=/home/common/scripts/:$HOME/.gem/ruby/2.4.0/bin/:$HOME/bin/:$PATH:/usr/lib/plan9/bin/:$HOME/go/bin
+
+export PAGER='less -RSMsi'
+export EDITOR='nvim'
+export VISUAL='nvim'
+export BROWSER='chromium'
+export GOPATH="$HOME/go/bin"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
