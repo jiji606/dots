@@ -1,0 +1,30 @@
+ncmpcpp_directory = ~/.ncmpcpp
+lyrics_directory = /mnt/USERS/music/lyrics
+mpd_host = localhost
+mpd_port = 6600
+mpd_music_dir = /mnt/USERS/music/
+visualizer_fifo_path = /tmp/mpd.fifo
+visualizer_output_name = Visualizer feed
+visualizer_in_stereo = no
+visualizer_sync_interval = 30
+visualizer_type = spectrum
+visualizer_look = ●■
+playlist_disable_highlight_delay = 1
+
+song_list_format =$7%a$9 $1·$9 $6%t$9
+song_status_format = $7{{%a{ "%b"{ (%y)}} - }{%t}}|{%f}$9
+now_playing_prefix ="$7 →  $9$b"
+selected_item_prefix = $6
+playlist_separate_albums = no
+playlist_display_mode = classic
+browser_display_mode = columns
+discard_colors_if_item_is_selected = yes
+progressbar_look = ━■─
+header_visibility = no
+titles_visibility = no
+follow_now_playing_lyrics = yes
+fetch_lyrics_for_current_song_in_background = yes
+store_lyrics_in_song_dir = yes
+generate_win32_compatible_filenames = yes
+
+colors_enabled = yes
