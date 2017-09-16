@@ -1,0 +1,84 @@
+border_top=1
+border_bottom=1
+border_left=1
+border_right=1
+border=#29d900
+background=#0c4100
+separator=false
+separator_block_width=1
+
+#[iface]
+#full_text=
+#label=enp2s0:
+#command=/usr/lib/i3blocks/iface
+#interval=30
+#color=#29d900
+[external_ip]
+full_text=
+label=ext ip:
+command=curl -s ifconfig.me/ip
+interval=30
+color=#29d900
+
+[volume]
+label=VOL:
+full_text=
+command=echo " $(/usr/lib/i3blocks/volume) "
+color=#29d900
+interval=once
+signal=10
+
+#[uptime]
+#full_text=
+#label=up:
+#command=date -u -d @$(cat /proc/uptime | cut -f 1 -d " ") +"%H:%M"
+#interval=1m
+#color=#29d900
+
+[load]
+full_text=
+label=load:
+command=cat /proc/loadavg | cut -f 1,2,3 -d " "
+interval=30
+color=#29d900
+
+#[cpu]
+#full_text=
+#label=cpu:
+#command=/usr/lib/i3blocks/cpu_usage
+#interval=5s
+#color=#29d900
+
+[disk /]
+full_text=
+label=root:
+command=df -h / --output=avail | tail -n 1 | tr -d " "
+interval=360
+color=#29d900
+
+[disk /home]
+full_text=
+label=home:
+command=df -h /home --output=avail | tail -n 1 | tr -d " "
+interval=360
+color=#29d900
+
+[mpd]
+full_text=
+label=music:
+command=/home/common/scripts/mpd_i3bar
+interval=persist
+color=#29d900
+
+[updates]
+full_text=
+label=updates:
+command=/home/common/scripts/any_updates -d
+interval=persist
+color=#29d900
+
+[clock]
+full_text=
+command=/home/common/scripts/clock -sf '%a, %d %b %H:%M'
+interval=persist
+color=#29d900

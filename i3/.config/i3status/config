@@ -1,0 +1,47 @@
+general {
+	output_format = "i3bar"
+	colors = true
+	interval = 5
+}
+
+order += "volume master"
+order += "load"
+order += "ethernet enp2s0"
+order += "ethernet br0"
+order += "disk /"
+order += "disk /home"
+order += "time"
+
+
+ethernet enp2s0 {
+	format_up = "eth0: %ip"
+	format_down = "eth0: down"
+}
+
+ethernet br0 {
+	format_up = "br0: %ip"
+	format_down = "br0: down"
+}
+
+disk "/" {
+	format = "root: %free"
+}
+
+disk "/home" {
+	format = "home: %free"
+}
+
+time {
+	format = "%Y-%m-%d %H:%M"
+}
+
+load {
+	format = "load: %1min %5min %15min"
+}
+
+volume master {
+	format = "volume: %volume"
+	format_muted = "volume: muted"
+	device = "pulse"
+}
+

@@ -1,0 +1,170 @@
+exec dunst
+exec xrdb ~/Xresources.d/Xresources
+exec redshift
+exec nitrogen --restore
+exec export LANG=pl_PL.UTF-8
+exec export XDG_CURRENT_DESKTOP=KDE
+exec xset fp+ ~/.fonts
+exec xset fp rehash
+exec setxkbmap -layout pl,us
+exec xmodmap .Xmodmap &
+exec xsetroot -cursor_name left_ptr
+exec xbanish
+exec mpd
+exec compton
+
+
+set $mod Mod4
+
+new_window normal
+for_window [class="^.*"] border normal 1
+
+#font pango:Envy Code R 10
+font pango:Iosevka 10
+#font -*-snap-*-*-*-*-*-*-*-*-*-*-*-*
+
+floating_modifier $mod
+#smart_borders off
+workspace_auto_back_and_forth yes
+force_display_urgency_hint 1000 ms
+focus_on_window_activation urgent
+show_marks yes
+
+bindsym $mod+Return exec konsole
+bindsym $mod+e exec /home/common/scripts/lock -p
+bindsym XF86AudioRaiseVolume exec amixer set Master 5000+ ; exec pkill -RTMIN+10 i3blocks
+bindsym XF86AudioLowerVolume exec amixer set Master 5000- ; exec pkill -RTMIN+10 i3blocks
+bindsym XF86AudioMute exec amixer set Master toggle ; exec pkill -RTMIN+10 i3blocks
+bindsym XF86AudioPlay exec mpc toggle
+bindsym XF86AudioNext exec mpc next
+bindsym XF86AudioPrev exec mpc prev
+bindsym XF86AudioStop exec mpc stop
+
+gaps outer 10
+gaps inner 5
+
+
+bindsym $mod+q kill
+
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
+
+bindsym $mod+c split v
+
+bindsym $mod+v split h
+
+bindsym $mod+f fullscreen toggle
+bindsym $mod+Shift+space floating toggle
+
+bindsym $mod+space focus mode_toggle
+
+bindsym $mod+z focus parent
+
+set $workspace1 1:web
+set $workspace2 2:dev
+set $workspace3 3:irc
+set $workspace4 4
+set $workspace5 5
+set $workspace6 6
+set $workspace7 7
+set $workspace8 8
+set $workspace9 9
+set $workspace10 10:slack
+
+bindsym $mod+1 workspace $workspace1
+bindsym $mod+2 workspace $workspace2
+bindsym $mod+3 workspace $workspace3
+bindsym $mod+4 workspace $workspace4
+bindsym $mod+5 workspace $workspace5
+bindsym $mod+6 workspace $workspace6
+bindsym $mod+7 workspace $workspace7
+bindsym $mod+8 workspace $workspace8
+bindsym $mod+9 workspace $workspace9
+bindsym $mod+0 workspace $workspace10
+
+bindsym $mod+Shift+1 move container to workspace $workspace1
+bindsym $mod+Shift+2 move container to workspace $workspace2
+bindsym $mod+Shift+3 move container to workspace $workspace3
+bindsym $mod+Shift+4 move container to workspace $workspace4
+bindsym $mod+Shift+5 move container to workspace $workspace5
+bindsym $mod+Shift+6 move container to workspace $workspace6
+bindsym $mod+Shift+7 move container to workspace $workspace7
+bindsym $mod+Shift+8 move container to workspace $workspace8
+bindsym $mod+Shift+9 move container to workspace $workspace9
+bindsym $mod+Shift+0 move container to workspace $workspace10
+
+bindsym $mod+Shift+c reload
+bindsym $mod+Shift+r restart
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+
+# resize mode
+bindsym $mod+u mode "resize"
+mode "resize" {
+	bindsym h resize grow left 10 px or 10 ppt
+	bindsym j resize grow down 10 px or 10 ppt
+	bindsym k resize grow up 10 px or 10 ppt
+	bindsym l resize grow right 9 px or 10 ppt
+	bindsym Shift+h resize shrink right 10 px or 10 ppt
+	bindsym Shift+j resize shrink up 10 px or 10 ppt
+	bindsym Shift+k resize shrink down 10 px or 10 ppt
+	bindsym Shift+l resize shrink left 0 px or 10 ppt
+	bindsym Return mode "default"
+	bindsym Escape mode "default"
+}
+
+# layout mode
+bindsym $mod+d mode "layout"
+mode "layout" {
+	bindsym f fullscreen toggle
+	bindsym s layout stacking
+	bindsym t layout tabbed
+	bindsym v layout splith
+	bindsym h layout splitv
+	bindsym l floating toggle
+	bindsym Escape mode "default"
+}
+
+# launcher mode
+bindsym $mod+r mode "launch"
+mode "launch" {
+	bindsym +r exec rofi -show run ; mode "default"
+	bindsym +s exec rofi -show ssh ; mode "default"
+	bindsym +d exec rofi -show drun ; mode "default"
+	bindsym +w exec rofi -show window ; mode "default"
+	bindsym Escape mode "default"
+}
+
+# client class          border  backgr. text    indic.  child_b
+client.focused          #829cd3 #000000aa #e8e8e8 #597bc5 #829cd3
+client.focused_inactive #202020 #000000aa #e8e8e8 #6c6c6c #202020
+client.unfocused        #202020 #000000aa #6c6c6c #6c6c6c #202020
+client.urgent           #f22e2e #dd7664aa #ffffff #6c6c6c #f22e2e
+
+client.background #1d1d1d
+
+bar {
+	colors {
+		background         #00000033
+		statusline         #6c6c6c
+		focused_workspace  #000000 #151515 #597bc5
+		active_workspace   #000000 #101010 #829cd3
+		inactive_workspace #000000 #101010 #6c6c6c
+		urgent_workspace   #000000 #f22e2e #e8e8d3
+	}
+	height 22
+	tray_output none
+	position bottom
+	i3bar_command i3bar -t
+	status_command i3blocks
+	font pango:Iosevka 10
+	#font pango:Envy Code R 10
+	#font -*-snap-*-*-*-*-*-*-*-*-*-*-*-*
+}
+
