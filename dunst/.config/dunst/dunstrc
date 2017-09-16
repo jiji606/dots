@@ -1,0 +1,48 @@
+[global]
+	font = "Iosevka 12"
+	allow_markup = yes
+	format = "%i %a\n<b>%s</b>\n%b"
+	sort = yes
+	indicate_hidden = true
+	word_wrap = yes
+	geometry = "300x10-50+60"
+	follow = mouse
+	sticky_history = yes
+	history_length = 20
+	separator_height = 1
+	padding = 10
+	horizontal_padding = 10
+	separator_color = frame
+	startup_notification = false
+	dmenu = /usr/bin/dmenu -p dunst:
+	browser = /usr/bin/chromium
+	icon_position = off
+
+[play_sound]
+	summary = "*"
+	script = /home/common/scripts/alert
+
+[frame]
+	width = 2
+	color = "#333333"
+
+[shortcuts]
+	close = ctrl+space
+	close_all = ctrl+shift+space
+	history = ctrl+grave
+	context = ctrl+shift+period
+
+[urgency_low]
+	background = "#000000"
+	foreground = "#aaaaaa"
+	timeout = 5
+
+[urgency_normal]
+	background = "#000000"
+	foreground = "#ffffff"
+	timeout = 5
+
+[urgency_critical]
+	background = "#000000"
+	foreground = "#ff4444"
+	timeout = 0
