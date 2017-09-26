@@ -10,6 +10,7 @@ call plug#begin()
 	Plug 'godlygeek/tabular'
 	Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 	Plug 'junegunn/fzf.vim'
+	Plug 'keith/tmux.vim'
 	Plug 'KeyboardFire/vim-minisnip'
 	Plug 'lilydjwg/colorizer'
 	Plug 'ludovicchabant/vim-gutentags'
