@@ -1,0 +1,37 @@
+! vim: set filetype=xdefaults :
+
+! special
+*background:#312e39
+*foreground:#c0a79a
+
+! black
+*color0:#312e39
+*color8:#33303b
+
+! red
+*color1:#87404f
+*color9:#87404f
+
+! green
+*color2:#4c9882
+*color10:#87404f
+
+! yellow
+*color3:#71949a
+*color11:#71949a
+
+! blue
+*color4:#615772
+*color12:#71949a
+
+! magenta
+*color5:#783e57
+*color13:#783e57
+
+! cyan
+*color6:#554757
+*color14:#554757
+
+! white
+*color7:#554757
+*color15:#c0a79a

@@ -1,0 +1,40 @@
+! vim: set filetype=xdefaults:
+! to match with openbox theme
+
+! special
+*.foreground:     #b9b9b9
+*.background:     #101010
+URxvt.background: [98]#101010
+*.cursorColor:    #b9b9b9
+
+! black
+*.color0:         #101010
+*.color8:         #525252
+
+! red
+*.color1:         #7F1E31
+*.color9:         #7F1E31
+
+! green
+*.color2:         #8e8e8e
+*.color10:        #8e8e8e
+
+! yellow
+*.color3:         #a0a0a0
+*.color11:        #a0a0a0
+
+! blue
+*.color4:         #C3314F
+*.color12:        #C3314F
+
+! magenta
+*.color5:         #747474
+*.color13:        #747474
+
+! cyan
+*.color6:         #868686
+*.color14:        #868686
+
+! white
+*.color7:         #b9b9b9
+*.color15:        #f7f7f7
