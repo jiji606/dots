@@ -4,3 +4,5 @@
 *boldFont: xft:Fantasque Sans Mono:style:Bold:size=12
 *italicFont: xft:Fantasque Sans Mono:style:Italic:size=12
 *boldItalicFont: xft:Fantasque Sans Mono:style:Bold Italic:size=12
+
+st.font: Fantasque Sans Mono:pixelsize=20:antialias=true:autohint=true:style=regular
