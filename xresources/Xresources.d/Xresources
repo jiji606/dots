@@ -1,0 +1,68 @@
+! vim: set filetype=xdefaults :
+
+*VT100.colorBDMode:      true
+*VT100.colorBD:          red
+*VT100.colorULMode:      true
+*VT100.colorUL:          magenta
+*VT100.veryBoldColors:   6
+
+
+!colorscheme
+#include "./current_theme"
+!fonts
+#include "./current_font"
+
+!font settings
+Xft.lcdfilter:           lcddefault
+Xft.antialias:           true
+Xft.autohint:            0
+Xft.hinting:             true
+Xft.hintstyle:           hintslight
+Xft.rgba:                rgb
+Xft.dpi:                 96
+
+!urxvt settings
+URxvt.depth:             32
+URxvt.shade:             100
+URxvt.letterSpace:       0
+URxvt.lineSpace:         0
+URxvt.tripleclickwords:  true
+URxvt.insecure:          true
+URxvt.pointerBlank:      true
+URxvt.internalBorder:    5
+URxvt.geometry:          95x30
+URxvt.cursorBlink:       true
+URxvt.urgentOnBell:      true
+URxvt.scrollBar:         false
+URxvt.scrollBar_right:   false
+URxvt.scrollBar_floating:false
+URxvt.scrollstyle:       plain
+URxvt.scrollColor:       #202020
+
+!st settings
+st.bold_font:            1
+st.cursorshape:          2
+st.cursorthickness:      2
+st.cursorblinkontype:    0
+
+!emacs
+Emacs.FontBackend:       xft
+Emacs.font:              Monospace-10
+
+rofi.lines:              10
+rofi.bw:                 0
+rofi.font:               Iosevka 11
+rofi.eh:                 1
+rofi.hide-scrollbar:     true
+rofi.line-margin:        1
+rofi.separator-style:    none
+rofi.columns:            1
+rofi.width:              70
+rofi.location:           0
+rofi.padding:            400
+rofi.fullscreen:         true
+rofi.sidebar-mode:       false
+rofi.terminal:           urxvt
+rofi.matching:           regex
+
+rofi.color-enabled: true
