@@ -227,4 +227,4 @@ let g:deoplete#sources#jedi#show_docstring = "1"
 " }}}
 " }}}
 
-colorscheme gmnspring
+colorscheme base16-unikitty-light
