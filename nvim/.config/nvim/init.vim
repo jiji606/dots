@@ -7,6 +7,7 @@ call plug#begin()
 	Plug 'airblade/vim-rooter'
 	Plug 'arcticicestudio/nord-vim'
 	Plug 'chriskempson/base16-vim'
+	Plug 'davidhalter/jedi-vim'
 	Plug 'godlygeek/tabular'
 	Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 	Plug 'junegunn/fzf.vim'
@@ -24,6 +25,7 @@ call plug#begin()
 	Plug 'tpope/vim-vinegar'
 	Plug 'wellle/targets.vim'
 	Plug 'whatyouhide/vim-gotham'
+	Plug 'zchee/deoplete-jedi'
 call plug#end()
 
 " }}}
@@ -36,6 +38,8 @@ autocmd FileType python setlocal expandtab
 autocmd FileType python set tabstop=4
 autocmd FileType python set shiftwidth=4
 autocmd FileType python set softtabstop=4
+autocmd FileType python set makeprg=pylint\ --output-format=parseable\ --reports=n\ --init-import=y\ %
+autocmd FileType python set efm
 augroup END
 
 " }}}
@@ -208,6 +212,13 @@ let g:jellybeans_overrides = {
 let g:jellybeans_overrides = {
 \    'background': { 'guibg': '000000' },
 \}
+" }}}
+" JEDI: {{{
+let g:jedi#use_splits_not_buffers = "bottom"
+let g:jedi#show_call_signatures = "2"
+let g:jedi#completions_enabled = 0
+" deoplete jedi
+let g:deoplete#sources#jedi#show_docstring = "1"
 " }}}
 " }}}
 
