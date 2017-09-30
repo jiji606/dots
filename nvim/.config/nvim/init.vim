@@ -86,8 +86,11 @@ set virtualedit=insert,block
 " show sign column
 autocmd BufEnter * sign define dummy
 autocmd BufEnter * execute 'sign place 9999 line=1 name=dummy buffer=' . bufnr('')
+" fix puppet files syntax highlighting
+autocmd BufEnter *.pp :syntax sync fromstart
 
-" autocmd BufEnter *.pp :syntax sync fromstart
+autocmd QuickFixCmdPost [^l]* nested cwindow
+autocmd QuickFixCmdPost    l* nested lwindow
 
 " }}}
 " KEYMAPS: {{{
@@ -114,6 +117,8 @@ xnoremap < <gv
 let mapleader=" "
 nmap <Leader>b :Buffers<CR>
 nmap <Leader>t :Tags<CR>
+nmap <Leader>[ :tabp<CR>
+nmap <Leader>] :tabn<CR>
 
 "check highlight group under cursor
 map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
