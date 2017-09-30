@@ -1,0 +1,5 @@
+urxvt.font: xft:Iosevka:style:Regular:size=10
+urxvt.italicFont: xft:Iosevka:style:Regular:size=10
+urxvt.boldItalicFont: xft:Iosevka:style:Regular:size=10
+
+st.font: Iosevka:pixelsize=14:antialias=true:autohint=true:style=regular

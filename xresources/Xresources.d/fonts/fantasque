@@ -1,0 +1,6 @@
+! vim: set filetype=xdefaults:
+
+*font: xft:Fantasque Sans Mono:style:Regular:size=12
+*boldFont: xft:Fantasque Sans Mono:style:Bold:size=12
+*italicFont: xft:Fantasque Sans Mono:style:Italic:size=12
+*boldItalicFont: xft:Fantasque Sans Mono:style:Bold Italic:size=12

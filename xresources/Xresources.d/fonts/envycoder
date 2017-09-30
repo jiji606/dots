@@ -1,0 +1,8 @@
+! vim: set filetype=xdefaults:
+
+*font: xft:Envy Code R:style:Regular:size=11
+*boldFont: xft:Envy Code R:style:Bold:size=11
+*italicFont: xft:Envy Code R:style:Italic:size=11
+*boldItalicFont: xft:Envy Code R:style:Bold Italic:size=11
+
+st.font: Envy Code R:pixelsize=11:antialias=true:autohint=true:style=regular

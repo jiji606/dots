@@ -1,0 +1,7 @@
+! vim: set filetype=xdefaults:
+
+urxvt.font: xft:InputMonoNarrow:style:Regular:size=11
+urxvt.italicFont: xft:InputMonoNarrow:style:Regular:size=11
+urxvt.boldItalicFont: xft:InputMonoNarrow:style:Regular:size=11
+
+st.font: Input Mono Narrow:pixelsize=14:antialias=true:autohint=true:style=regular

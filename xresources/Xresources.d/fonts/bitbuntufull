@@ -1,0 +1,6 @@
+! vim: set filetype=xdefaults:
+
+*font:-*-bitbuntufull-medium-r-normal-*-10-100-72-72-c-90-utf8-1,-*-siji-medium-*-normal-*-10-100-75-75-c-80-iso10646-1
+*boldFont:-*-bitbuntufull-medium-r-normal-*-10-100-72-72-c-90-utf8-1,-*-siji-medium-*-normal-*-10-100-75-75-c-80-iso10646-1
+*italicFont:-*-bitbuntufull-medium-r-normal-*-10-100-72-72-c-90-utf8-1,-*-siji-medium-*-normal-*-10-100-75-75-c-80-iso10646-1
+*boldItalicFont:-*-bitbuntufull-medium-r-normal-*-10-100-72-72-c-90-utf8-1,-*-siji-medium-*-normal-*-10-100-75-75-c-80-iso10646-1

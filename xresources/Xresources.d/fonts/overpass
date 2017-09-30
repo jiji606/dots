@@ -1,0 +1,6 @@
+*font: xft:Overpass Mono:style=Regular:size=12
+*boldFont: xft:Overpass Mono:style=SemiBold:size=12
+*italicFont: xft:Overpass Mono:style=Light:size=12
+*boldItalicFont: xft:Overpass Mono:style=Bold:size=12
+
+st.font: Overpass Mono:pixelsize=13:antialias=true:autohint=true:style=regular

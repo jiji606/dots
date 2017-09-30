@@ -1,0 +1,6 @@
+! vim: set filetype=xdefaults:
+
+*font:-*-drift.pl-*-*-*-*-*-*-*-*-*-*-*-*,-*-siji-medium-*-normal-*-10-100-75-75-c-80-iso10646-1
+*boldFont:-*-drift.pl-*-*-*-*-*-*-*-*-*-*-*-*,-*-siji-medium-*-normal-*-10-100-75-75-c-80-iso10646-1
+*italicFont:-*-drift.pl-*-*-*-*-*-*-*-*-*-*-*-*,-*-siji-medium-*-normal-*-10-100-75-75-c-80-iso10646-1
+*boldItalicFont:-*-drift.pl-*-*-*-*-*-*-*-*-*-*-*-*,-*-siji-medium-*-normal-*-10-100-75-75-c-80-iso10646-1

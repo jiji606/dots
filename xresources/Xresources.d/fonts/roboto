@@ -1,0 +1,4 @@
+*font: xft:RobotoMono:style:Regular:size=10
+*boldFont: xft:RobotoMono:style:Bold:size=10
+*italicFont: xft:RobotoMono:style:Italic:size=10
+*boldItalicFont: xft:RobotoMono:style:Bold Italic:size=10

@@ -1,0 +1,6 @@
+*font: xft:PragmataPro:style:Regular:size=11
+*boldFont: xft:PragmataPro:style:Bold:size=11
+*italicFont: xft:PragmataPro:style:Italic:size=11
+*boldItalicFont: xft:PragmataPro:style:Bold Italic:size=11
+
+st.font: PragmataPro:pixelsize=16:antialias=true:autohint=true:style=regular
