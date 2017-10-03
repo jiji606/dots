@@ -1,6 +1,6 @@
 [global]
 	font = "Iosevka 12"
-	allow_markup = yes
+	markup = yes
 	format = "%i %a\n<b>%s</b>\n%b"
 	sort = yes
 	indicate_hidden = true
@@ -17,14 +17,13 @@
 	dmenu = /usr/bin/dmenu -p dunst:
 	browser = /usr/bin/chromium
 	icon_position = off
+	frame_width = 2
+	frame_color = "#333333"
 
 [play_sound]
 	summary = "*"
 	script = /home/common/scripts/alert
 
-[frame]
-	width = 2
-	color = "#333333"
 
 [shortcuts]
 	close = ctrl+space
