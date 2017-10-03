@@ -36,3 +36,10 @@
 ! white
 *.color7:      #6c696e
 *.color15:     #322d34
+
+!                  !bg      !border  !sep
+rofi.color-window: #e1e1e2, #d8137f, #c4c3c5
+!                  !bg      !fg      !bgalt   !hlbg    !hlfg
+rofi.color-normal: #c4c3c5, #6c696e, #e1e1e2, #d8137f, #e1e1e1
+rofi.color-urgent: #dc8a0e, #c3c4c5, #e1e1e2, #d8137f, #e1e1e2
+rofi.color-active: #17ad98, #322d34, #16ac90, #d8137f, #e1e1e2
