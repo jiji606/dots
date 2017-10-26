@@ -1,6 +1,6 @@
 [global]
-	font = "Iosevka 12"
-	allow_markup = yes
+	font = "Fantasque Sans Mono 16"
+	markup = yes
 	format = "%i %a\n<b>%s</b>\n%b"
 	sort = yes
 	indicate_hidden = true
@@ -17,14 +17,12 @@
 	dmenu = /usr/bin/dmenu -p dunst:
 	browser = /usr/bin/chromium
 	icon_position = off
+	frame_width = 4
+	frame_color = "#d8137f"
 
 [play_sound]
 	summary = "*"
 	script = /home/common/scripts/alert
-
-[frame]
-	width = 2
-	color = "#333333"
 
 [shortcuts]
 	close = ctrl+space
@@ -33,16 +31,16 @@
 	context = ctrl+shift+period
 
 [urgency_low]
-	background = "#000000"
-	foreground = "#aaaaaa"
+	background = "#e1e1e2"
+	foreground = "#322d34"
 	timeout = 5
 
 [urgency_normal]
-	background = "#000000"
-	foreground = "#ffffff"
+	background = "#e1e1e2"
+	foreground = "#d8137f"
 	timeout = 5
 
 [urgency_critical]
-	background = "#000000"
-	foreground = "#ff4444"
+	background = "#d8137f"
+	foreground = "#e1e1e2"
 	timeout = 0
