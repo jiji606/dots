@@ -215,7 +215,7 @@ let g:jellybeans_overrides = {
 \    'background': { 'ctermbg': 'none', '256ctermbg': 'none' },
 \}
 let g:jellybeans_overrides = {
-\    'background': { 'guibg': '000000' },
+\    'background': { 'guibg': '151515' },
 \}
 " }}}
 " JEDI: {{{
@@ -227,4 +227,4 @@ let g:deoplete#sources#jedi#show_docstring = "1"
 " }}}
 " }}}
 
-colorscheme gmnspring
+colorscheme jellybeans
