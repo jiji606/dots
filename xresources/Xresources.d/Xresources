@@ -30,7 +30,7 @@ URxvt.lineSpace:         0
 URxvt.tripleclickwords:  true
 URxvt.insecure:          true
 URxvt.pointerBlank:      true
-URxvt.internalBorder:    5
+URxvt.internalBorder:    10
 URxvt.geometry:          95x30
 URxvt.cursorBlink:       true
 URxvt.urgentOnBell:      true
