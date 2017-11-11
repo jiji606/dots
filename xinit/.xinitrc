@@ -2,12 +2,22 @@
 
 dunst &
 nitrogen --restore &
-xset fp+ ~/.fonts
-xset fp rehash
+
+if [[ -f $HOME/.Xmodmap ]] ; then
+	xmodmap $HOME/.Xmodmap
+fi
+
+if [[ -d $HOME/.fonts ]] ; then
+	xset fp+ $HOME/.fonts
+	xset fp rehash
+fi
+
+if [[ -f $HOME/Xresources.d/Xresources ]] ; then
+	xrdb $HOME/Xresources.d/Xresources
+fi
+
 xcalib -gc 1.1 -a
-xrdb ~/Xresources.d/Xresources
 setxkbmap -layout pl,us
-xmodmap .Xmodmap &
 xsetroot -cursor_name left_ptr
 xautolock -detectsleep \
 	-time 15 \
