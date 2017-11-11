@@ -1,5 +1,5 @@
 [global]
-	font = "Fantasque Sans Mono 16"
+	font = "ypn envypn 10"
 	markup = yes
 	format = "%i %a\n<b>%s</b>\n%b"
 	sort = yes
@@ -17,8 +17,8 @@
 	dmenu = /usr/bin/dmenu -p dunst:
 	browser = /usr/bin/chromium
 	icon_position = off
-	frame_width = 4
-	frame_color = "#d8137f"
+	frame_width = 1
+	frame_color = "#cf6a4c"
 
 [play_sound]
 	summary = "*"
@@ -31,16 +31,16 @@
 	context = ctrl+shift+period
 
 [urgency_low]
-	background = "#e1e1e2"
-	foreground = "#322d34"
+	background = "#121212"
+	foreground = "#adadad"
 	timeout = 5
 
 [urgency_normal]
-	background = "#e1e1e2"
-	foreground = "#d8137f"
+	background = "#121212"
+	foreground = "#cf6a4c"
 	timeout = 5
 
 [urgency_critical]
-	background = "#d8137f"
-	foreground = "#e1e1e2"
+	background = "#cf6a4c"
+	foreground = "#121212"
 	timeout = 0
