@@ -52,7 +52,7 @@ Emacs.font:              Monospace-10
 
 rofi.lines:              10
 rofi.bw:                 3
-rofi.font:               Fantasque Sans Mono 16
+rofi.font:               Envy Code R 10
 rofi.eh:                 1
 rofi.hide-scrollbar:     true
 rofi.line-margin:        1
