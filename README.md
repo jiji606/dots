@@ -48,7 +48,9 @@ Plugins used:
 + [vim-gotham *by* whatyouhide](https://github.com/whatyouhide/vim-gotham)  
 + [deoplete-jedi *by* zchee](https://github.com/zchee/deoplete-jedi) - python completion  
 
-Config is pretty easy to understand and is divided in sensible sections. I am not using any heavy statusline plugins as I find them to be overkill. Weird parts in the config are commented, rest should be pretty self-explanatory.
+Config is pretty easy to understand and is divided in sensible sections.
+I am not using any heavy statusline plugins as I find them to be overkill.
+Weird parts in the config are commented, rest should be pretty self-explanatory.
 
 #### nice settings
 
@@ -59,6 +61,25 @@ Config is pretty easy to understand and is divided in sensible sections. I am no
 
 ---
 
+### tmux
+
+I use a prefix-less tmux config.
+Splitting and moving between panes is done with the alt modifier.
+
++ `alt+w` - new window  
++ `alt+n` - move to the n-th window  
++ `alt+q` - kill current window  
++ `alt+{h,j,k,l}` - move between panes {left,down,up,right}  
++ `alt+shift+{h,j,k,l}` - resize current pane {left,down,up,right}  
++ `alt+m` - maximize current pane  
++ `alt+v` - split window vertically  
++ `alt+h` - split window horizontally  
+
 ### konsole
 
-I am using konsole mostly because of ligature support and hassle-free config (both gui and config file). It mostly just works and that's great.
+I am using konsole mostly because of ligature support and hassle-free config (both gui and config file).
+It mostly just works and that's great.
+
+I start konsole with `/usr/bin/tmux new-session -t konsolesession; new-window` as the starting shell making it automatically connect to the current tmux session and open new window in it.
+This way all my opened terminals are connected to the same session.
+With agressive resize turned off tmux windows are not automatically resized when viewed from different terminals.
