@@ -75,3 +75,4 @@ export PERL_MM_OPT
 PATH=$HOME/perl5/bin:$HOME/Skrypty/:$HOME/.gem/ruby/2.4.0/bin/:$HOME/bin/:$PATH:/usr/lib/plan9/bin/
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
