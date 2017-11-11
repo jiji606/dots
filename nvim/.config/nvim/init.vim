@@ -215,12 +215,8 @@ let g:gitgutter_highlight_lines = 0
 " }}}
 " JELLYBEANS: {{{
 
-let g:jellybeans_overrides = {
-\    'background': { 'ctermbg': 'none', '256ctermbg': 'none' },
-\}
-let g:jellybeans_overrides = {
-\    'background': { 'guibg': '000000' },
-\}
+let g:jellybeans_overrides = { 'background': { 'guibg': '101010' }, }
+
 " }}}
 " JEDI: {{{
 let g:jedi#use_splits_not_buffers = "bottom"
