@@ -19,13 +19,6 @@ feh --bg-tile $HOME/Obrazy/tapety/nh-apluto-wide-9-17-15-final_0.png
 xcalib -gc 1.1 -a
 setxkbmap -layout pl,us
 xsetroot -cursor_name left_ptr
-xautolock -detectsleep \
-	-time 15 \
-	-locker lock \
-	-notify 30 \
-	-notifier "notify-send 'locking in 30s'" \
-	-corners 0-00 \
-	-cornerdelay 0 &
 xbanish &
 mpd &
 sxhkd &
