@@ -117,6 +117,10 @@ xnoremap < <gv
 let mapleader=" "
 nmap <Leader>b :Buffers<CR>
 nmap <Leader>t :Tags<CR>
+nmap <Leader>f :Files<CR>
+nmap <Leader>w :Windows<CR>
+nmap <Leader>h :History<CR>
+nmap <Leader>c :BCommits<CR>
 nmap <Leader>[ :tabp<CR>
 nmap <Leader>] :tabn<CR>
 
