@@ -21,6 +21,5 @@ setxkbmap -layout pl,us
 xsetroot -cursor_name left_ptr
 xbanish &
 mpd &
-sxhkd &
 
 exec cwm
