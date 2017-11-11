@@ -24,7 +24,6 @@ Xft.rgba:                rgb
 Xft.dpi:                 96
 
 !urxvt settings
-URxvt.depth:             32
 URxvt.shade:             100
 URxvt.letterSpace:       0
 URxvt.lineSpace:         0
