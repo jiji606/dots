@@ -1,6 +1,3 @@
-
-export LANG=pl_PL.UTF-8
-export QT_QPA_PLATFORMTHEME="kde"
 #!/usr/bin/env bash
 
 dunst &
