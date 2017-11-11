@@ -12,6 +12,7 @@ mpd/.config/mpd/logs
 mpd/.config/mpd/pid
 mpd/.config/mpd/state
 mpd/.config/mpd/sticker.sql
+mpd/.config/mpd/mpd.db
 ncmpcpp/.ncmpcpp/error.log
 xresources/.config/current_theme
 xresources/.config/current_font
