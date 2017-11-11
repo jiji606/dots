@@ -11,16 +11,16 @@ general {
 
 order += "volume master"
 order += "load"
-order += "ethernet enp2s0"
+order += "ethernet eno1"
 order += "ethernet br0"
 order += "disk /"
 order += "disk /home"
 order += "time"
 
 
-ethernet enp2s0 {
-	format_up = "eth0: %ip"
-	format_down = "eth0: down"
+ethernet eno1 {
+	format_up   = "eno1: %ip"
+	format_down = "eno1: down"
 }
 
 ethernet br0 {
