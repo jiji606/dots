@@ -24,3 +24,4 @@ mpd &
 /usr/lib/polkit-kde-authentication-agent-1 &
 
 exec cwm
+echo $$ > /tmp/session_pid
