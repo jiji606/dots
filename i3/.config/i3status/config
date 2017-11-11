@@ -25,7 +25,7 @@ ethernet eno1 {
 }
 
 ethernet br0 {
-	format_up = "br0: %ip"
+	format_up   = "br0: %ip"
 	format_down = "br0: down"
 }
 
@@ -51,9 +51,9 @@ load {
 }
 
 volume master {
-	format = "volume: %volume"
+	format       = "volume: %volume"
 	format_muted = "volume: muted"
-	device = "pulse"
+	device       = "pulse"
 }
 
 battery 0 {
