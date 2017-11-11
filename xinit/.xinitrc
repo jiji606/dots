@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
 dunst &
-nitrogen --restore &
 
 if [[ -f $HOME/.Xmodmap ]] ; then
 	xmodmap $HOME/.Xmodmap
@@ -16,6 +15,7 @@ if [[ -f $HOME/Xresources.d/Xresources ]] ; then
 	xrdb $HOME/Xresources.d/Xresources
 fi
 
+feh --bg-tile $HOME/Obrazy/tapety/nh-apluto-wide-9-17-15-final_0.png
 xcalib -gc 1.1 -a
 setxkbmap -layout pl,us
 xsetroot -cursor_name left_ptr
