@@ -13,6 +13,7 @@ order += "volume master"
 order += "load"
 order += "ethernet eno1"
 order += "ethernet br0"
+order += "wireless wlp3s0"
 order += "disk /"
 order += "disk /home"
 order += "time"
@@ -26,6 +27,11 @@ ethernet eno1 {
 ethernet br0 {
 	format_up = "br0: %ip"
 	format_down = "br0: down"
+}
+
+wireless wlp3s0 {
+	format_up   = "wlp3s0: %ip@%essid"
+	format_down = "wlp3s0: down"
 }
 
 disk "/" {
