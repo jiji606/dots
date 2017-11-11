@@ -1,7 +1,12 @@
 general {
-	output_format = "i3bar"
-	colors = true
-	interval = 5
+	separator       = " │ "
+	output_format   = "none"
+	colors          = false
+	color_separator = "#e1e1e2"
+	color_good      = "#17ad83"
+	color_degraded  = "#d65407"
+	color_bad       = "#2e2a31"
+	interval        = 5
 }
 
 order += "volume master"
