@@ -33,6 +33,10 @@ function lsza {
 		du -sh $f
 	done
 }
+function ssh {
+	export SSH_AUTH_SOCK=/tmp/$USER.agent
+	/usr/bin/ssh $@
+}
 
 PATH=/home/common/scripts/:$HOME/.gem/ruby/2.4.0/bin/:$HOME/bin/:$PATH:/usr/lib/plan9/bin/:$HOME/go/bin
 
