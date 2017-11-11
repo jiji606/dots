@@ -12,6 +12,7 @@ alias checkkeysyms="xev | sed -n 's/^.*keycode *\([0-9]\+\).*$/keycode \1 = /p'"
 alias grep='grep --color=auto'
 alias tmux='tmux -2'
 alias rm='rm -i'
+alias ssh-agent='ssh-agent -a /tmp/$USER.agent'
 
 function mkcd {
 	mkdir "$1"
