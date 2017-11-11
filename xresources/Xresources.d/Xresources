@@ -67,3 +67,5 @@ rofi.terminal:           konsole
 rofi.matching:           regex
 
 rofi.color-enabled: true
+
+dzen2.font: -*-envypn-*-*-*-*-*-*-*-*-*-*-*-*
