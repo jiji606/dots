@@ -9,7 +9,7 @@ call plug#begin()
 	Plug 'chriskempson/base16-vim'
 	Plug 'davidhalter/jedi-vim'
 	Plug 'godlygeek/tabular'
-	Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+	Plug 'junegunn/fzf', { 'dir': '~/.local/share/fzf', 'do': './install --all' }
 	Plug 'junegunn/fzf.vim'
 	Plug 'keith/tmux.vim'
 	Plug 'KeyboardFire/vim-minisnip'
