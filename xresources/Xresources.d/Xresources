@@ -1,5 +1,7 @@
 ! vim: set filetype=xdefaults :
 
+Xcursor.theme:            miniature
+
 *VT100.colorBDMode:      true
 *VT100.colorBD:          red
 *VT100.colorULMode:      true
