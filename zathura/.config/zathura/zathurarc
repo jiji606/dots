@@ -1,0 +1,31 @@
+set font                    "Envy Code R 13"
+set default-fg              "#e8e8d3"
+set default-bg              "#121212"
+
+set statusbar-fg            "#e8e8d3"
+set statusbar-bg            "#121212"
+
+set inputbar-bg             "#121212"
+set inputbar-fg             "#e8e8d3"
+
+set notification-error-bg   "#cf6a4c"
+set notification-error-fg   "#121212"
+
+set notification-warning-bg "#d8ad4c"
+set notification-warning-fg "#121212"
+
+set highlight-color         "#6c6c6c"
+set highlight-active-color  "#e8e8d3"
+
+set completion-highlight-fg "#e8e8d3"
+set completion-highlight-bg "#3b3b3b"
+
+set completion-bg           "#121212"
+set completion-fg           "#e8e8d3"
+
+set notification-bg         "#99ad6a"
+set notification-fg         "#121212"
+
+set recolor-lightcolor      "#121212"
+set recolor-darkcolor       "#e8e8d3"
+set recolor                 "true"
