@@ -56,12 +56,12 @@ function for-dir {
 	done
 }
 
-PATH=/home/common/scripts/:$HOME/.gem/ruby/2.4.0/bin/:$HOME/bin/:$PATH:/usr/lib/plan9/bin/:$HOME/go/bin
 
 export PAGER='less -RSMsi'
 export EDITOR='nvim'
 export VISUAL='nvim'
 export BROWSER='chromium'
 export GOPATH="$HOME/go/bin"
+PATH=$HOME/perl5/bin:$HOME/Skrypty/:$HOME/.gem/ruby/2.4.0/bin/:$HOME/bin/:$PATH:/usr/lib/plan9/bin/
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
