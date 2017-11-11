@@ -231,4 +231,4 @@ let g:deoplete#sources#jedi#show_docstring = "1"
 " }}}
 " }}}
 
-colorscheme base16-unikitty-light
+colorscheme jellybeans
