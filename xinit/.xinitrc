@@ -23,10 +23,13 @@ xbanish &
 mpd &
 /usr/lib/polkit-kde-authentication-agent-1 &
 
-exec cwm
 echo $$ > /tmp/session_pid
 
 xscreensaver -no-splash &
 
 $HOME/Skrypty/touchpadtoggle.sh
 $HOME/Skrypty/startup.sh &
+
+while true ; do
+	dwm &> .dwm.log
+done
