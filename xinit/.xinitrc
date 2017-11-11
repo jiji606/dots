@@ -28,3 +28,4 @@ echo $$ > /tmp/session_pid
 
 xscreensaver -no-splash &
 
+$HOME/Skrypty/touchpadtoggle.sh
