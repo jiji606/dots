@@ -21,5 +21,6 @@ setxkbmap -layout pl,us
 xsetroot -cursor_name left_ptr
 xbanish &
 mpd &
+/usr/lib/polkit-kde-authentication-agent-1 &
 
 exec cwm
