@@ -15,7 +15,6 @@ order += "ethernet eno1"
 order += "ethernet br0"
 order += "wireless wlp3s0"
 order += "disk /"
-order += "disk /home"
 order += "time"
 
 
