@@ -65,7 +65,7 @@ PERL_MM_OPT="INSTALL_BASE=$HOME/perl5"
 export PAGER='less -RSMsi'
 export EDITOR='nvim'
 export VISUAL='nvim'
-export BROWSER='chromium'
+export BROWSER='firefox-nightly'
 export GOPATH="$HOME/go/bin"
 export PERL5LIB
 export PERL_LOCAL_LIB_ROOT
