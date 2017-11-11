@@ -25,3 +25,6 @@ mpd &
 
 exec cwm
 echo $$ > /tmp/session_pid
+
+xscreensaver -no-splash &
+
