@@ -7,22 +7,7 @@ alias mv='mv -v'
 alias info='info --vi-keys'
 alias dd='dd status=progress'
 alias pacman='pacman --color auto'
-alias mystyle="astyle -A2 \
---indent=force-tab=8 \
--C \
--xG \
--S \
--Y \
--m0 \
--f \
--H \
--U \
--xe \
--E \
--j \
--xL \
--q \
---lineend=linux"
+alias mystyle='astyle -A2 --indent=force-tab=8 -C -xG -S -Y -m0 -f -H -U -xe -E -j -xL -q --lineend=linux'
 alias checkkeysyms="xev | sed -n 's/^.*keycode *\([0-9]\+\).*$/keycode \1 = /p'"
 alias grep='grep --color=auto'
 alias tmux='tmux -2'
