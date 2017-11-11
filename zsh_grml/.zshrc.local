@@ -56,12 +56,22 @@ function for-dir {
 	done
 }
 
+PERL5LIB="$HOME/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"
+PERL_LOCAL_LIB_ROOT="$HOME/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"
+PERL_MB_OPT="--install_base \"$HOME/perl5\""
+PERL_MM_OPT="INSTALL_BASE=$HOME/perl5"
+
 
 export PAGER='less -RSMsi'
 export EDITOR='nvim'
 export VISUAL='nvim'
 export BROWSER='chromium'
 export GOPATH="$HOME/go/bin"
+export PERL5LIB
+export PERL_LOCAL_LIB_ROOT
+export PERL_MB_OPT
+export PERL_MM_OPT
+
 PATH=$HOME/perl5/bin:$HOME/Skrypty/:$HOME/.gem/ruby/2.4.0/bin/:$HOME/bin/:$PATH:/usr/lib/plan9/bin/
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
