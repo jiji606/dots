@@ -41,6 +41,20 @@ function ssh-add {
 	export SSH_AUTH_SOCK=/tmp/$USER.agent
 	/usr/bin/ssh-add
 }
+function for-file {
+	for file in * ; do
+		if [[ -f $file ]] ; then
+			echo $file ;
+		fi
+	done
+}
+function for-dir {
+	for dir in * ; do
+		if [[ -d $dir ]] ; then
+			echo $dir ;
+		fi
+	done
+}
 
 PATH=/home/common/scripts/:$HOME/.gem/ruby/2.4.0/bin/:$HOME/bin/:$PATH:/usr/lib/plan9/bin/:$HOME/go/bin
 
