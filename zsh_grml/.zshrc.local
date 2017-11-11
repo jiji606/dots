@@ -11,11 +11,6 @@ alias mystyle='astyle -A2 --indent=force-tab=8 -C -xG -S -Y -m0 -f -H -U -xe -E 
 alias checkkeysyms="xev | sed -n 's/^.*keycode *\([0-9]\+\).*$/keycode \1 = /p'"
 alias grep='grep --color=auto'
 alias tmux='tmux -2'
-alias mvim='nvim -u $HOME/.config/nvim/minivim.vim'
-alias govim='nvim -u $HOME/.config/nvim/govim.vim'
-alias govim_config='govim $HOME/.config/nvim/govim.vim'
-alias mvim_config='mvim $HOME/.config/nvim/minivim.vim'
-alias vim_config='vim $HOME/.config/nvim/init.vim'
 alias rm='rm -i'
 
 function mkcd {
