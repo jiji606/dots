@@ -11,11 +11,11 @@ Using [Gnu Stow](https://www.gnu.org/software/stow/) to manage dotfiles.
 
 + **window manager** - pretty heavily patched version of dwm which you can find [here](https://github.com/jiji606/dwm)  
 + **notification daemon** - [dunst](https://dunst-project.org)  
-+ **network management** - NetworkManager used with nmcli command (zsh autocompletion makes it pretty easy)  
-+ **password management** - keepassxc wich has builtin keepasshttp daemon for integration with firefox  
++ **network management** - NetworkManager - nmcli  
++ **password management** - keepassxc  
 + **web browser** - firefox-nightly with vimium and qutebrowser  
-+ **shell** - zsh with grml config - lightweight and easy to use  
-+ **launcher** - rofi  
++ **shell** - zsh with grml config  
++ **launcher** - [rofi](https://github.com/DaveDavenport/rofi)  
 
 ---
 
@@ -74,6 +74,8 @@ Splitting and moving between panes is done with the alt modifier.
 + `alt+m` - maximize current pane  
 + `alt+v` - split window vertically  
 + `alt+h` - split window horizontally  
+
+---
 
 ### konsole
 
