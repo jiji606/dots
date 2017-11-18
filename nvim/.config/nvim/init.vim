@@ -8,6 +8,7 @@ call plug#begin()
 	Plug 'arcticicestudio/nord-vim'
 	Plug 'chriskempson/base16-vim'
 	Plug 'davidhalter/jedi-vim'
+	Plug 'dhruvasagar/vim-table-mode'
 	Plug 'godlygeek/tabular'
 	Plug 'junegunn/fzf', { 'dir': '~/.local/share/fzf', 'do': './install --all' }
 	Plug 'junegunn/fzf.vim'
@@ -224,6 +225,9 @@ let g:jedi#show_call_signatures = "2"
 let g:jedi#completions_enabled = 0
 " deoplete jedi
 let g:deoplete#sources#jedi#show_docstring = "1"
+" }}}
+" TABLEMODE: {{{
+let g:table_mode_corner='|'
 " }}}
 " }}}
 
