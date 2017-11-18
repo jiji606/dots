@@ -19,6 +19,7 @@ call plug#begin()
 	Plug 'majutsushi/tagbar'
 	Plug 'nanotech/jellybeans.vim'
 	Plug 'notpratheek/vim-sol'
+	Plug 'fxn/vim-monochrome'
 	Plug 'rodjek/vim-puppet'
 	Plug 'tpope/vim-eunuch'
 	Plug 'tpope/vim-fugitive'
