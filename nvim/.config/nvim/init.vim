@@ -136,6 +136,7 @@ set colorcolumn=80
 set background=dark
 set clipboard=unnamed
 set completeopt=longest,menuone,noinsert,noselect
+set complete=.,w,b,u,U,i,d,t
 set cursorline
 set fillchars+=vert:│,fold:―
 set foldmethod=indent
