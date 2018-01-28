@@ -225,6 +225,9 @@ nmap <silent> <C-c> :nohlsearch<CR>
 " toggle relative mode
 nmap <silent> <Leader>r :set relativenumber!<CR>
 
+" search for current word with vimgrep. noautocmd makes the search faster
+nmap <Leader>v :execute "noautocmd vimgrep /" . expand("<cword>") . "/j **" <Bar> cw<CR>
+
 " brackets autoexpansion
 inoremap (<CR> (<CR>)<Esc>O
 inoremap {<CR> {<CR>}<Esc>O
