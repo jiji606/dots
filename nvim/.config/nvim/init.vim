@@ -99,6 +99,26 @@ augroup shell_files
 	autocmd FileType sh setlocal iskeyword+=$
 augroup END
 " }}}
+" C: {{{
+
+augroup c_files
+	autocmd!
+	autocmd FileType c set cscopetag
+	autocmd FileType c set cscopequickfix=s-,c-,d-,i-,t-,e-,a-
+	autocmd FileType c GenGTAGS
+	autocmd FileType c ChromaticaStart
+augroup END
+" }}}
+" CPP: {{{
+
+augroup cpp_files
+	autocmd!
+	autocmd FileType cpp set cscopetag
+	autocmd FileType cpp set cscopequickfix=s-,c-,d-,i-,t-,e-,a-
+	autocmd FileType cpp GenGTAGS
+	autocmd FileType cpp ChromaticaStart
+augroup END
+" }}}
 
 filetype plugin indent on
 
