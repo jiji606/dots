@@ -89,7 +89,15 @@ autocmd FileType python set softtabstop=4
 		autocmd FileType python set makeprg=pylint3\ --output-format=parseable\ --reports=n\ --init-import=y\ %
 	endif
 augroup END
+" }}}
+" SHELL: {{{
 
+augroup shell_files
+	autocmd!
+	autocmd FileType bash set omnifunc=zsh_completion#Complete
+	autocmd FileType sh set omnifunc=zsh_completion#Complete
+	autocmd FileType sh setlocal iskeyword+=$
+augroup END
 " }}}
 
 filetype plugin indent on
