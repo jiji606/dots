@@ -78,11 +78,11 @@ call plug#end()
 let PYTHON_VIRTUAL_ENV=$VIRTUAL_ENV
 
 augroup python_files
-autocmd!
-autocmd FileType python setlocal expandtab
-autocmd FileType python set tabstop=4
-autocmd FileType python set shiftwidth=4
-autocmd FileType python set softtabstop=4
+	autocmd!
+	autocmd FileType python setlocal expandtab
+	autocmd FileType python set tabstop=4
+	autocmd FileType python set shiftwidth=4
+	autocmd FileType python set softtabstop=4
 	if exists("PYTHON_VIRTUAL_ENV")
 		autocmd FileType python set makeprg=PYTHON_VIRTUAL_ENV/bin/pylint\ --output-format=parseable\ --reports=n\ --init-import=y\ %
 	else
