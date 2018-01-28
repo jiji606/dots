@@ -138,7 +138,7 @@ set clipboard=unnamed
 set complete=.,w,b,u,U,i,d,t
 set completeopt=longest,menuone,preview,noinsert,noselect
 set cursorline
-set fillchars+=vert:│,fold:―
+set fillchars+=vert:│,fold:-
 set foldmethod=indent
 set helplang=pl
 set hidden
