@@ -131,6 +131,7 @@ augroup END
 filetype plugin indent on
 
 set formatoptions+=jqlcro
+set wildignore+=tags
 set background=dark
 set clipboard=unnamed
 set completeopt=longest,menuone,noinsert,noselect
