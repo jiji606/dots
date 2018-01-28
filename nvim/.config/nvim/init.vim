@@ -397,4 +397,4 @@ hi default chromaticaClassDecl gui=bold
 " }}}
 " }}}
 
-colorscheme jellybeans
+colorscheme typo
