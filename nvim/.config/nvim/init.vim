@@ -222,6 +222,9 @@ nmap <Leader>] :tabn<CR>
 " disable highlighting after search
 nmap <silent> <C-c> :nohlsearch<CR>
 
+" toggle relative mode
+nmap <silent> <Leader>r :set relativenumber!<CR>
+
 " brackets autoexpansion
 inoremap (<CR> (<CR>)<Esc>O
 inoremap {<CR> {<CR>}<Esc>O
