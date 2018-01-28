@@ -334,8 +334,14 @@ let g:jellybeans_overrides = { 'background': { 'guibg': '101010' }, }
 let g:jedi#use_splits_not_buffers = "bottom"
 let g:jedi#show_call_signatures = "2"
 let g:jedi#completions_enabled = 0
-" deoplete jedi
-let g:deoplete#sources#jedi#show_docstring = "1"
+let g:jedi#goto_command = ""
+let g:jedi#goto_assignments_command = ""
+let g:jedi#goto_definitions_command = ""
+let g:jedi#documentation_command = ""
+let g:jedi#usages_command = ""
+let g:jedi#completions_command = ""
+let g:jedi#rename_command = ""
+let g:virtualenv_auto_activate = 1
 " }}}
 " TABLEMODE: {{{
 
