@@ -273,7 +273,6 @@ set statusline+=%=      "left/right separator
 set statusline+=%c,     "cursor column
 set statusline+=%l/%L   "cursor line/total lines
 set statusline+=\ %P    "percent through file<Paste>
-
 " }}}
 " }}}
 " PLUGIN SETTINGS: {{{
@@ -281,7 +280,6 @@ set statusline+=\ %P    "percent through file<Paste>
 
 let g:minisnip_dir = $HOME . '/.config/nvim/minisnip'
 let g:minisnip_trigger = '<C-S>'
-
 " }}}
 " FZFSETTINGS: {{{
 
@@ -326,14 +324,13 @@ let g:gitgutter_sign_removed = '-'
 let g:gitgutter_sign_removed_first_line = '≃'
 let g:gitgutter_sign_modified_removed = '≅'
 let g:gitgutter_highlight_lines = 0
-
 " }}}
 " JELLYBEANS: {{{
 
 let g:jellybeans_overrides = { 'background': { 'guibg': '101010' }, }
-
 " }}}
 " JEDI: {{{
+
 let g:jedi#use_splits_not_buffers = "bottom"
 let g:jedi#show_call_signatures = "2"
 let g:jedi#completions_enabled = 0
@@ -341,6 +338,7 @@ let g:jedi#completions_enabled = 0
 let g:deoplete#sources#jedi#show_docstring = "1"
 " }}}
 " TABLEMODE: {{{
+
 let g:table_mode_corner='|'
 " }}}
 " }}}
