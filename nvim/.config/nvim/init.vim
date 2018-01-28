@@ -206,6 +206,7 @@ nmap <silent> <s-left> : tabn<cr>
 tnoremap <Esc> <C-\><C-n>
 xnoremap > >gv
 xnoremap < <gv
+map <F4> :make<CR>
 
 let mapleader=" "
 nmap <Leader>b :Buffers<CR>
