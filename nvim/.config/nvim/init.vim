@@ -176,10 +176,11 @@ set noshowcmd
 set noruler
 
 " show sign column
-autocmd BufEnter * sign define dummy
-autocmd BufEnter * execute 'sign place 9999 line=1 name=dummy buffer=' . bufnr('')
-" fix puppet files syntax highlighting
-autocmd BufEnter *.pp :syntax sync fromstart
+augroup sign_column
+	autocmd!
+	autocmd BufEnter * sign define dummy
+	autocmd BufEnter * execute 'sign place 9999 line=1 name=dummy buffer=' . bufnr('')
+augroup END
 
 autocmd QuickFixCmdPost [^l]* nested cwindow
 autocmd QuickFixCmdPost    l* nested lwindow
