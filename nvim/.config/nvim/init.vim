@@ -168,6 +168,7 @@ set termguicolors
 set tildeop
 set undodir=~/.config/nvim/undodir
 set undofile
+set dir=~/.cache/nvim/
 set virtualedit=insert,block
 
 " show sign column
