@@ -259,6 +259,8 @@ endfunction
 " STATUS: {{{
 
 set statusline=
+set statusline+=\ [%{virtualenv#statusline()}]
+set statusline+=\ [%{ObsessionStatus()}]
 set statusline+=\ [%{StatuslineGit()}]
 set statusline+=\ %t       "tail of the filename
 set statusline+=\ [%{strlen(&fenc)?&fenc:'none'}, "file encoding
