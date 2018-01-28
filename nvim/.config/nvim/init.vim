@@ -374,5 +374,27 @@ let g:UltiSnipsRemoveSelectModeMappings = 0
 " optional
 inoremap <silent> <c-u> <c-r>=cm#sources#ultisnips#trigger_or_popup("\<Plug>(ultisnips_expand)")<cr>
 " }}}
+" CHROMATICA: {{{
+
+let g:chromatica#libclang_path='/usr/lib/llvm-5.0/lib/libclang.so'
+let g:chromatica#highlight_feature_level=1
+let g:chromatica#responsive_mode=0
+" COLORS: {{{
+
+hi default Member ctermfg=LightBlue guifg=LightBlue
+hi default Variable ctermfg=Grey guifg=#C1C1C1
+hi default Namespace guifg=#C1C1C1 gui=bold
+hi default Typedef gui=bold guifg=#cf6a4c
+hi default EnumConstant ctermfg=LightGreen guifg=LightGreen
+hi default chromaticaException gui=bold guifg=#cf6a4c
+hi default chromaticaCast gui=bold
+hi default OperatorOverload gui=bold guifg=#C1C1C1
+hi default AccessQual gui=underline
+hi default Linkage gui=italic
+hi default AutoType gui=italic
+hi default chromaticaClassDecl gui=bold
+" }}}
+" }}}
+" }}}
 
 colorscheme jellybeans
