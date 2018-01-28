@@ -365,5 +365,14 @@ let g:ale_set_quickfix = 1
 let g:ale_open_list = 1
 let g:ale_python_pylint_executable = 'pylint3'
 " }}}
+" ULTISNIPS: {{{
+
+let g:UltiSnipsExpandTrigger = "<Plug>(ultisnips_expand)"
+let g:UltiSnipsJumpForwardTrigger = "<c-j>"
+let g:UltiSnipsJumpBackwardTrigger = "<c-k>"
+let g:UltiSnipsRemoveSelectModeMappings = 0
+" optional
+inoremap <silent> <c-u> <c-r>=cm#sources#ultisnips#trigger_or_popup("\<Plug>(ultisnips_expand)")<cr>
+" }}}
 
 colorscheme jellybeans
