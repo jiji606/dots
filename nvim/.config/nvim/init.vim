@@ -171,6 +171,10 @@ set undofile
 set dir=~/.cache/nvim/
 set virtualedit=insert,block
 
+" showcmd and ruler may slow nvim down
+set noshowcmd
+set noruler
+
 " show sign column
 autocmd BufEnter * sign define dummy
 autocmd BufEnter * execute 'sign place 9999 line=1 name=dummy buffer=' . bufnr('')
