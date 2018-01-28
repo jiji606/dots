@@ -130,7 +130,6 @@ augroup END
 
 filetype plugin indent on
 
-let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
 set background=dark
 set clipboard=unnamed
 set completeopt=longest,menuone,noinsert,noselect
