@@ -75,14 +75,19 @@ call plug#end()
 " SETTINGS: {{{
 " PYTHON: {{{
 
+let PYTHON_VIRTUAL_ENV=$VIRTUAL_ENV
+
 augroup python_files
 autocmd!
 autocmd FileType python setlocal expandtab
 autocmd FileType python set tabstop=4
 autocmd FileType python set shiftwidth=4
 autocmd FileType python set softtabstop=4
-autocmd FileType python set makeprg=pylint\ --output-format=parseable\ --reports=n\ --init-import=y\ %
-autocmd FileType python set efm
+	if exists("PYTHON_VIRTUAL_ENV")
+		autocmd FileType python set makeprg=PYTHON_VIRTUAL_ENV/bin/pylint\ --output-format=parseable\ --reports=n\ --init-import=y\ %
+	else
+		autocmd FileType python set makeprg=pylint3\ --output-format=parseable\ --reports=n\ --init-import=y\ %
+	endif
 augroup END
 
 " }}}
