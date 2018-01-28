@@ -214,6 +214,7 @@ nmap <Leader>t :Tags<CR>
 nmap <Leader>f :Files<CR>
 nmap <Leader>w :Windows<CR>
 nmap <Leader>h :History<CR>
+nmap <Leader>m :Marks<CR>
 nmap <Leader>c :BCommits<CR>
 nmap <Leader>[ :tabp<CR>
 nmap <Leader>] :tabn<CR>
