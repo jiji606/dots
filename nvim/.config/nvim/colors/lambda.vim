@@ -17,17 +17,17 @@ endif
 let g:colors_name="lambda"
 
 
-hi Normal        guifg=#969896  guibg=#181818 gui=none
-hi Title         guifg=white
+hi Normal        guifg=none  guibg=#121212 gui=none
+hi Title         guifg=none
 hi Cursor        guibg=#ffffff
-hi LineNr        guifg=#6a6a6a  guibg=#232323
-hi CursorLineNr  guifg=#6a6a6a  guibg=#2c2a28  gui=none
+hi LineNr        guifg=none  guibg=none
+hi CursorLineNr  guifg=#ffffff  guibg=#252525  gui=none
 
-hi Visual        guibg=#2c2a28
-hi NonText       guifg=#181818  guibg=#181818
-hi StatusLine    guifg=#e6e6e6  guibg=#2c2a28  gui=none
-hi StatusLineNC  guifg=#6a6a6a  guibg=#2c2a28  gui=none
-hi VertSplit     guifg=#ff2a28  guibg=#2c2a28  gui=none
+hi Visual        guibg=#252525
+hi NonText       guifg=#252525
+hi StatusLine    guifg=#e6e6e6  guibg=#252525  gui=none
+hi StatusLineNC  guifg=#6a6a6a  guibg=#252525  gui=none
+hi VertSplit     guifg=#c1c1c1     guibg=#252525  gui=none
 hi ModeMsg       guifg=#6a6a6a  guibg=#181818  gui=none
 hi ErrorMsg      guifg=#181818  guibg=#FF242D  gui=none
 hi Error         guifg=#FF242D  guibg=#181818  gui=none
