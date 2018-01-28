@@ -347,6 +347,13 @@ let g:virtualenv_auto_activate = 1
 
 let g:table_mode_corner='|'
 " }}}
+" TAGBAR: {{{
+
+let g:tagbar_compact = 1
+let g:tagbar_show_visibility = 1
+let g:tagbar_singleclick = 1
+let g:tagbar_iconchars = ['▸', '▾']
+let g:tagbar_autoshowtag = 1
 " }}}
 
 colorscheme jellybeans
