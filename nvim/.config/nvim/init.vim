@@ -144,7 +144,7 @@ set helplang=pl
 set hidden
 set hlsearch
 set inccommand=split
-set laststatus=0
+set laststatus=2
 set linebreak
 set linespace=2
 set list
