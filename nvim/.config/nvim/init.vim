@@ -119,6 +119,14 @@ augroup cpp_files
 	autocmd FileType cpp ChromaticaStart
 augroup END
 " }}}
+" PUPPET: {{{
+
+" fix puppet files syntax highlighting
+augroup puppet_files
+	autocmd!
+	autocmd BufEnter *.pp :syntax sync fromstart
+augroup END
+" }}}
 
 filetype plugin indent on
 
