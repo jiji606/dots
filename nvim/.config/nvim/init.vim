@@ -3,31 +3,72 @@
 " PLUGINS: {{{
 
 call plug#begin()
-	Plug 'airblade/vim-gitgutter'
-	Plug 'airblade/vim-rooter'
+
+	" COLORSCHEMES: {{{
+
+	Plug 'metalelf0/base16-black-metal-scheme'
 	Plug 'arcticicestudio/nord-vim'
-	Plug 'chriskempson/base16-vim'
+	Plug 'notpratheek/vim-sol'
+	Plug 'nanotech/jellybeans.vim'
+	Plug 'fxn/vim-monochrome'
+	Plug 'whatyouhide/vim-gotham'
+	" }}}
+	" GIT: {{{
+
+	Plug 'airblade/vim-gitgutter'
+	Plug 'tpope/vim-fugitive'
+	" }}}
+	" COMPLETION LINTING COMPILING: {{{
+
 	Plug 'davidhalter/jedi-vim'
+	Plug 'jsfaint/gen_tags.vim'
+	Plug 'tenfyzhong/CompleteParameter.vim'
+	Plug 'roxma/nvim-completion-manager'
+	Plug 'roxma/ncm-clang'
+	Plug 'Shougo/neoinclude.vim'
+	Plug 'Valodim/vim-zsh-completion'
+	Plug 'majutsushi/tagbar'
+	Plug 'vim-syntastic/syntastic'
+	Plug 'jmcantrell/vim-virtualenv'
+	" }}}
+	" SNIPPETS: {{{
+
+	Plug 'SirVer/ultisnips'
+	Plug 'honza/vim-snippets'
+	" }}}
+	" FORMATTING: {{{
+
 	Plug 'dhruvasagar/vim-table-mode'
 	Plug 'godlygeek/tabular'
+	" }}}
+	" SYNTAX: {{{
+
+	Plug 'keith/tmux.vim'
+	Plug 'PProvost/vim-ps1'
+	Plug 'rodjek/vim-puppet'
+	Plug 'momota/cisco.vim'
+	Plug 'arakashic/chromatica.nvim'
+	" }}}
+	" PROJECT MANAGEMENT: {{{
+
+	Plug 'airblade/vim-rooter'
+	Plug 'mhinz/vim-startify'
+	Plug 'tpope/vim-obsession'
+	" }}}
+	" INTERFACE: {{{
+
 	Plug 'junegunn/fzf', { 'dir': '~/.local/share/fzf', 'do': './install --all' }
 	Plug 'junegunn/fzf.vim'
-	Plug 'keith/tmux.vim'
-	Plug 'KeyboardFire/vim-minisnip'
 	Plug 'lilydjwg/colorizer'
-	Plug 'ludovicchabant/vim-gutentags'
-	Plug 'majutsushi/tagbar'
-	Plug 'nanotech/jellybeans.vim'
-	Plug 'notpratheek/vim-sol'
-	Plug 'fxn/vim-monochrome'
-	Plug 'rodjek/vim-puppet'
-	Plug 'tpope/vim-eunuch'
-	Plug 'tpope/vim-fugitive'
-	Plug 'tpope/vim-surround'
 	Plug 'tpope/vim-vinegar'
+	" }}}
+	" MOVING: {{{
+
+	Plug 'tpope/vim-eunuch'
+	Plug 'tpope/vim-surround'
 	Plug 'wellle/targets.vim'
-	Plug 'whatyouhide/vim-gotham'
-	Plug 'zchee/deoplete-jedi'
+	" }}}
+
 call plug#end()
 
 " }}}
