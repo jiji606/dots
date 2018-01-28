@@ -219,6 +219,9 @@ nmap <Leader>c :BCommits<CR>
 nmap <Leader>[ :tabp<CR>
 nmap <Leader>] :tabn<CR>
 
+" disable highlighting after search
+nmap <silent> <C-c> :nohlsearch<CR>
+
 " brackets autoexpansion
 inoremap (<CR> (<CR>)<Esc>O
 inoremap {<CR> {<CR>}<Esc>O
