@@ -107,6 +107,7 @@ augroup c_files
 	autocmd FileType c set cscopequickfix=s-,c-,d-,i-,t-,e-,a-
 	autocmd FileType c GenGTAGS
 	autocmd FileType c ChromaticaStart
+	autocmd FileType c set equalprg=astyle\ -A2\ --indent=force-tab=8\ -C\ -xG\ -S\ -Y\ -m0\ -f\ -H\ -U\ -xe\ -E\ -j\ -xL\ -q\ --lineend=linux
 augroup END
 " }}}
 " CPP: {{{
@@ -117,6 +118,7 @@ augroup cpp_files
 	autocmd FileType cpp set cscopequickfix=s-,c-,d-,i-,t-,e-,a-
 	autocmd FileType cpp GenGTAGS
 	autocmd FileType cpp ChromaticaStart
+	autocmd FileType cpp set equalprg=astyle\ -A2\ --indent=force-tab=8\ -C\ -xG\ -S\ -Y\ -m0\ -f\ -H\ -U\ -xe\ -E\ -j\ -xL\ -q\ --lineend=linux
 augroup END
 " }}}
 " PUPPET: {{{
