@@ -1,0 +1,24 @@
+! colors
+*.foreground:   #eeeeee
+*.background:   #121212
+*.cursorColor:  #eeeeee
+*.color0:       #121212
+*.color8:       #262626
+*.color1:       #D793B9
+*.color9:       #D793B9
+*.color2:       #444444
+*.color10:      #444444
+*.color3:       #6c6c6c
+*.color11:      #6c6c6c
+*.color4:       #8a8a8a
+*.color12:      #8a8a8a
+*.color5:       #b2b2b2
+*.color13:      #b2b2b2
+*.color6:       #eeeeee
+*.color14:      #eeeeee
+*.color7:       #ffffff
+*.color15:      #ffffff
+
+! polybar
+polybar.value:  #222222
+polybar.icon: #333333
