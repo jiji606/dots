@@ -1,77 +1,7 @@
 " vim: foldmethod=marker
 
-" PLUGINS: {{{
+execute pathogen#infect()
 
-call plug#begin()
-
-	" COLORSCHEMES: {{{
-
-	Plug 'metalelf0/base16-black-metal-scheme'
-	Plug 'arcticicestudio/nord-vim'
-	Plug 'notpratheek/vim-sol'
-	Plug 'nanotech/jellybeans.vim'
-	Plug 'fxn/vim-monochrome'
-	Plug 'whatyouhide/vim-gotham'
-	" }}}
-	" GIT: {{{
-
-	Plug 'airblade/vim-gitgutter'
-	Plug 'tpope/vim-fugitive'
-	" }}}
-	" COMPLETION LINTING COMPILING: {{{
-
-	Plug 'davidhalter/jedi-vim'
-	Plug 'jsfaint/gen_tags.vim'
-	Plug 'tenfyzhong/CompleteParameter.vim'
-	Plug 'roxma/nvim-completion-manager'
-	Plug 'roxma/ncm-clang'
-	Plug 'Shougo/neoinclude.vim'
-	Plug 'Valodim/vim-zsh-completion'
-	Plug 'majutsushi/tagbar'
-	Plug 'vim-syntastic/syntastic'
-	Plug 'jmcantrell/vim-virtualenv'
-	" }}}
-	" SNIPPETS: {{{
-
-	Plug 'SirVer/ultisnips'
-	Plug 'honza/vim-snippets'
-	" }}}
-	" FORMATTING: {{{
-
-	Plug 'dhruvasagar/vim-table-mode'
-	Plug 'godlygeek/tabular'
-	" }}}
-	" SYNTAX: {{{
-
-	Plug 'keith/tmux.vim'
-	Plug 'PProvost/vim-ps1'
-	Plug 'rodjek/vim-puppet'
-	Plug 'momota/cisco.vim'
-	Plug 'arakashic/chromatica.nvim'
-	" }}}
-	" PROJECT MANAGEMENT: {{{
-
-	Plug 'airblade/vim-rooter'
-	Plug 'mhinz/vim-startify'
-	Plug 'tpope/vim-obsession'
-	" }}}
-	" INTERFACE: {{{
-
-	Plug 'junegunn/fzf', { 'dir': '~/.local/share/fzf', 'do': './install --all' }
-	Plug 'junegunn/fzf.vim'
-	Plug 'lilydjwg/colorizer'
-	Plug 'tpope/vim-vinegar'
-	" }}}
-	" MOVING: {{{
-
-	Plug 'tpope/vim-eunuch'
-	Plug 'tpope/vim-surround'
-	Plug 'wellle/targets.vim'
-	" }}}
-
-call plug#end()
-
-" }}}
 " SETTINGS: {{{
 " PYTHON: {{{
 
@@ -278,44 +208,15 @@ set statusline+=\ %P    "percent through file<Paste>
 " }}}
 " }}}
 " PLUGIN SETTINGS: {{{
+" ERRORMARKER: {{{
+
+let errormarker_errortext = "E "
+let errormarker_warningtext = "W "
+" }}}
 " MINISNIP: {{{
 
 let g:minisnip_dir = $HOME . '/.config/nvim/minisnip'
 let g:minisnip_trigger = '<C-S>'
-" }}}
-" FZFSETTINGS: {{{
-
-" This is the default extra key bindings
-let g:fzf_action = {
-  \ 'ctrl-t': 'tab split',
-  \ 'ctrl-x': 'split',
-  \ 'ctrl-v': 'vsplit' }
-
-" Default fzf layout
-" - down / up / left / right
-let g:fzf_layout = { 'down': '~40%' }
-
-" Customize fzf colors to match your color scheme
-let g:fzf_colors =
-\ { 'fg':      ['fg', 'Normal'],
-  \ 'bg':      ['bg', 'Normal'],
-  \ 'hl':      ['fg', 'Comment'],
-  \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
-  \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
-  \ 'hl+':     ['fg', 'Statement'],
-  \ 'info':    ['fg', 'PreProc'],
-  \ 'prompt':  ['fg', 'Conditional'],
-  \ 'pointer': ['fg', 'Exception'],
-  \ 'marker':  ['fg', 'Keyword'],
-  \ 'spinner': ['fg', 'Label'],
-  \ 'header':  ['fg', 'Comment'] }
-
-" Enable per-command history.
-" CTRL-N and CTRL-P will be automatically bound to next-history and
-" previous-history instead of down and up. If you don't like the change,
-" explicitly bind the keys to down and up in your $FZF_DEFAULT_OPTS.
-let g:fzf_history_dir = '~/.local/share/fzf-history'
-
 " }}}
 " GITGUTTER: {{{
 
@@ -345,10 +246,6 @@ let g:jedi#completions_command = ""
 let g:jedi#rename_command = ""
 let g:virtualenv_auto_activate = 1
 " }}}
-" TABLEMODE: {{{
-
-let g:table_mode_corner='|'
-" }}}
 " TAGBAR: {{{
 
 let g:tagbar_compact = 1
@@ -356,46 +253,6 @@ let g:tagbar_show_visibility = 1
 let g:tagbar_singleclick = 1
 let g:tagbar_iconchars = ['▸', '▾']
 let g:tagbar_autoshowtag = 1
-" }}}
-" ALE: {{{
-
-let g:ale_lint_on_save = 1
-let g:ale_lint_on_text_changed = 'never'
-let g:ale_lint_on_enter = 0
-let g:ale_set_loclist = 0
-let g:ale_set_quickfix = 1
-let g:ale_open_list = 1
-let g:ale_python_pylint_executable = 'pylint3'
-" }}}
-" ULTISNIPS: {{{
-
-let g:UltiSnipsExpandTrigger = "<Plug>(ultisnips_expand)"
-let g:UltiSnipsJumpForwardTrigger = "<c-j>"
-let g:UltiSnipsJumpBackwardTrigger = "<c-k>"
-let g:UltiSnipsRemoveSelectModeMappings = 0
-" optional
-inoremap <silent> <c-u> <c-r>=cm#sources#ultisnips#trigger_or_popup("\<Plug>(ultisnips_expand)")<cr>
-" }}}
-" CHROMATICA: {{{
-
-let g:chromatica#libclang_path='/usr/lib/llvm-5.0/lib/libclang.so'
-let g:chromatica#highlight_feature_level=1
-let g:chromatica#responsive_mode=0
-" COLORS: {{{
-
-hi default Member ctermfg=LightBlue guifg=LightBlue
-hi default Variable ctermfg=Grey guifg=#C1C1C1
-hi default Namespace guifg=#C1C1C1 gui=bold
-hi default Typedef gui=bold guifg=#cf6a4c
-hi default EnumConstant ctermfg=LightGreen guifg=LightGreen
-hi default chromaticaException gui=bold guifg=#cf6a4c
-hi default chromaticaCast gui=bold
-hi default OperatorOverload gui=bold guifg=#C1C1C1
-hi default AccessQual gui=underline
-hi default Linkage gui=italic
-hi default AutoType gui=italic
-hi default chromaticaClassDecl gui=bold
-" }}}
 " }}}
 " }}}
 

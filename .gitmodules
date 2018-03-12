@@ -1,0 +1,51 @@
+[submodule "nvim/.config/nvim/bundle/vim-gitgutter"]
+	path = nvim/.config/nvim/bundle/vim-gitgutter
+	url = https://github.com/airblade/vim-gitgutter
+[submodule "nvim/.config/nvim/bundle/vim-fugitive"]
+	path = nvim/.config/nvim/bundle/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive
+[submodule "nvim/.config/nvim/bundle/jedi-vim"]
+	path = nvim/.config/nvim/bundle/jedi-vim
+	url = https://github.com/davidhalter/jedi-vim
+[submodule "nvim/.config/nvim/bundle/gen_tags.vim"]
+	path = nvim/.config/nvim/bundle/gen_tags.vim
+	url = https://github.com/jsfaint/gen_tags.vim
+[submodule "nvim/.config/nvim/bundle/tagbar"]
+	path = nvim/.config/nvim/bundle/tagbar
+	url = https://github.com/majutsushi/tagbar
+[submodule "nvim/.config/nvim/bundle/vim-virtualenv"]
+	path = nvim/.config/nvim/bundle/vim-virtualenv
+	url = https://github.com/jmcantrell/vim-virtualenv
+[submodule "nvim/.config/nvim/bundle/tabular"]
+	path = nvim/.config/nvim/bundle/tabular
+	url = https://github.com/godlygeek/tabular
+[submodule "nvim/.config/nvim/bundle/tmux.vim"]
+	path = nvim/.config/nvim/bundle/tmux.vim
+	url = https://github.com/keith/tmux.vim
+[submodule "nvim/.config/nvim/bundle/vim-puppet"]
+	path = nvim/.config/nvim/bundle/vim-puppet
+	url = https://github.com/rodjek/vim-puppet
+[submodule "nvim/.config/nvim/bundle/cisco.vim"]
+	path = nvim/.config/nvim/bundle/cisco.vim
+	url = https://github.com/momota/cisco.vim
+[submodule "nvim/.config/nvim/bundle/vim-obsession"]
+	path = nvim/.config/nvim/bundle/vim-obsession
+	url = https://github.com/tpope/vim-obsession
+[submodule "nvim/.config/nvim/bundle/colorizer"]
+	path = nvim/.config/nvim/bundle/colorizer
+	url = https://github.com/lilydjwg/colorizer
+[submodule "nvim/.config/nvim/bundle/vim-vinegar"]
+	path = nvim/.config/nvim/bundle/vim-vinegar
+	url = https://github.com/tpope/vim-vinegar
+[submodule "nvim/.config/nvim/bundle/vim-eunuch"]
+	path = nvim/.config/nvim/bundle/vim-eunuch
+	url = https://github.com/tpope/vim-eunuch
+[submodule "nvim/.config/nvim/bundle/vim-surround"]
+	path = nvim/.config/nvim/bundle/vim-surround
+	url = https://github.com/tpope/vim-surround
+[submodule "nvim/.config/nvim/bundle/targets.vim"]
+	path = nvim/.config/nvim/bundle/targets.vim
+	url = https://github.com/wellle/targets.vim
+[submodule "nvim/.config/nvim/bundle/vim-qlist"]
+	path = nvim/.config/nvim/bundle/vim-qlist
+	url = https://github.com/romainl/vim-qlist
