@@ -10,13 +10,13 @@ let PYTHON_VIRTUAL_ENV=$VIRTUAL_ENV
 augroup python_files
 	autocmd!
 	autocmd FileType python setlocal expandtab
-	autocmd FileType python set tabstop=4
-	autocmd FileType python set shiftwidth=4
-	autocmd FileType python set softtabstop=4
+	autocmd FileType python setlocal tabstop=4
+	autocmd FileType python setlocal shiftwidth=4
+	autocmd FileType python setlocal softtabstop=4
 	if exists("PYTHON_VIRTUAL_ENV")
-		autocmd FileType python set makeprg=PYTHON_VIRTUAL_ENV/bin/pylint\ --output-format=parseable\ --reports=n\ --init-import=y\ %
+		autocmd FileType python setlocal makeprg=PYTHON_VIRTUAL_ENV/bin/pylint\ --output-format=parseable\ --reports=n\ --init-import=y\ %
 	else
-		autocmd FileType python set makeprg=pylint3\ --output-format=parseable\ --reports=n\ --init-import=y\ %
+		autocmd FileType python setlocal makeprg=pylint3\ --output-format=parseable\ --reports=n\ --init-import=y\ %
 	endif
 augroup END
 " }}}
@@ -24,31 +24,30 @@ augroup END
 
 augroup shell_files
 	autocmd!
-	autocmd FileType bash set omnifunc=zsh_completion#Complete
-	autocmd FileType sh set omnifunc=zsh_completion#Complete
 	autocmd FileType sh setlocal iskeyword+=$
+	autocmd FileType sh setlocal makeprg=shellcheck\ --color=never\ --format=gcc\ %
 augroup END
 " }}}
 " C: {{{
 
 augroup c_files
 	autocmd!
-	autocmd FileType c set cscopetag
-	autocmd FileType c set cscopequickfix=s-,c-,d-,i-,t-,e-,a-
+	autocmd FileType c setlocal cscopeprg=gtags-cscope
+	autocmd FileType c cscope add GTAGS
+	autocmd FileType c setlocal cscopetag
+	autocmd FileType c setlocal cscopequickfix=s-,c-,d-,i-,t-,e-,a-
 	autocmd FileType c GenGTAGS
-	autocmd FileType c ChromaticaStart
-	autocmd FileType c set equalprg=astyle\ -A2\ --indent=force-tab=8\ -C\ -xG\ -S\ -Y\ -m0\ -f\ -H\ -U\ -xe\ -E\ -j\ -xL\ -q\ --lineend=linux
+	autocmd FileType c setlocal equalprg=astyle\ -A2\ --indent=force-tab=8\ -C\ -xG\ -S\ -Y\ -m0\ -f\ -H\ -U\ -xe\ -E\ -j\ -xL\ -q\ --lineend=linux
 augroup END
 " }}}
 " CPP: {{{
 
 augroup cpp_files
 	autocmd!
-	autocmd FileType cpp set cscopetag
-	autocmd FileType cpp set cscopequickfix=s-,c-,d-,i-,t-,e-,a-
+	autocmd FileType cpp setlocal cscopetag
+	autocmd FileType cpp setlocal cscopequickfix=s-,c-,d-,i-,t-,e-,a-
 	autocmd FileType cpp GenGTAGS
-	autocmd FileType cpp ChromaticaStart
-	autocmd FileType cpp set equalprg=astyle\ -A2\ --indent=force-tab=8\ -C\ -xG\ -S\ -Y\ -m0\ -f\ -H\ -U\ -xe\ -E\ -j\ -xL\ -q\ --lineend=linux
+	autocmd FileType cpp setlocal equalprg=astyle\ -A2\ --indent=force-tab=8\ -C\ -xG\ -S\ -Y\ -m0\ -f\ -H\ -U\ -xe\ -E\ -j\ -xL\ -q\ --lineend=linux
 augroup END
 " }}}
 " PUPPET: {{{
@@ -56,7 +55,7 @@ augroup END
 " fix puppet files syntax highlighting
 augroup puppet_files
 	autocmd!
-	autocmd BufEnter *.pp :syntax sync fromstart
+	autocmd FileType puppet :syntax sync fromstart
 augroup END
 " }}}
 
