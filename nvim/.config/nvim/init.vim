@@ -121,34 +121,26 @@ nnoremap j gj
 nnoremap k gk
 nnoremap gj j
 nnoremap gk k
-nmap <C-Right> : bnext!<cr>
-nmap <C-Left> : bprev!<cr>
-nmap <silent> <Up> : wincmd k<cr>
-nmap <silent> <Down> : wincmd j<cr>
-nmap <silent> <Right> : wincmd l<cr>
-nmap <silent> <Left> : wincmd h<cr>
-nmap <silent> <s-right> : tabn<cr>
-nmap <silent> <s-left> : tabn<cr>
 tnoremap <Esc> <C-\><C-n>
 xnoremap > >gv
 xnoremap < <gv
-map <F4> :make<CR>
+map <F4> :silent make<CR>
+nmap <silent> <C-c> :nohlsearch<CR>
 
 let mapleader=" "
-nmap <Leader>b :Buffers<CR>
-nmap <Leader>t :Tags<CR>
-nmap <Leader>f :Files<CR>
-nmap <Leader>w :Windows<CR>
-nmap <Leader>h :History<CR>
-nmap <Leader>m :Marks<CR>
-nmap <Leader>c :BCommits<CR>
+
+nmap <Leader>wh :wincmd h<cr>
+nmap <Leader>wj :wincmd j<cr>
+nmap <Leader>wk :wincmd k<cr>
+nmap <Leader>wl :wincmd l<cr>
 nmap <Leader>[ :tabp<CR>
 nmap <Leader>] :tabn<CR>
 
-" disable highlighting after search
-nmap <silent> <C-c> :nohlsearch<CR>
+nmap <Leader>b :ls<CR>:b
 
-" toggle relative mode
+nmap <Leader>y "+
+nmap <Leader>d "_
+
 nmap <silent> <Leader>r :set relativenumber!<CR>
 
 " search for current word with vimgrep. noautocmd makes the search faster
