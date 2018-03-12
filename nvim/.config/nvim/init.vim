@@ -108,13 +108,6 @@ set spelllang=en_us,pl
 set noshowcmd
 set noruler
 
-" show sign column
-augroup sign_column
-	autocmd!
-	autocmd BufEnter * sign define dummy
-	autocmd BufEnter * execute 'sign place 9999 line=1 name=dummy buffer=' . bufnr('')
-augroup END
-
 autocmd QuickFixCmdPost [^l]* nested cwindow
 autocmd QuickFixCmdPost    l* nested lwindow
 
