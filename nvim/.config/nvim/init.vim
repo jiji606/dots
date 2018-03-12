@@ -82,7 +82,7 @@ set list
 set listchars=tab:\│\ ,trail:¬,extends:>,precedes:<,nbsp:+
 set modeline
 set modelines=5
-set mouse=a
+set mouse=
 set noexpandtab
 set number
 set numberwidth=5
@@ -101,6 +101,8 @@ set undodir=~/.config/nvim/undodir
 set undofile
 set dir=~/.cache/nvim/
 set virtualedit=insert,block
+set backspace=indent,eol,start
+set spelllang=en_us,pl
 
 " showcmd and ruler may slow nvim down
 set noshowcmd
