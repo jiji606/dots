@@ -1,5 +1,9 @@
 # cwmrc
 
+# unbind all keys first
+unbind-key all
+unbind-mouse all
+
 # behaviour
 sticky     yes
 snapdist   5
@@ -21,107 +25,80 @@ color           font "#aaaaaa"
 color        selfont "#ffffff"
 color         menubg "#000000"
 color         menufg "#333333"
-fontname             "Iosevka:size=11"
+# fontname             "Iosevka:size=11"
 gap 100 100 100 100
 
-# keybinds
-bind 4S-q          quit
-bind 4C-q          restart
-bind 4-w           search
-bind 4-r           exec
-bind 4-s           ssh
+# keymaps
+bind-key 4S-q            quit
+bind-key 4C-q            restart
+bind-key 4-w             menu-window
+bind-key 4-r             menu-exec
+bind-key 4-s             menu-ssh
 
-bind 4C-1          group1
-bind 4C-2          group2
-bind 4C-3          group3
-bind 4C-4          group4
-bind 4C-5          group5
-bind 4C-6          group6
-bind 4C-7          group7
-bind 4C-8          group8
-bind 4C-9          group9
-bind 4C-0          group10
+bind-key 4C-1            group-toggle-1
+bind-key 4C-2            group-toggle-2
+bind-key 4C-3            group-toggle-3
+bind-key 4C-4            group-toggle-4
+bind-key 4C-5            group-toggle-5
+bind-key 4C-6            group-toggle-6
+bind-key 4C-7            group-toggle-7
+bind-key 4C-8            group-toggle-8
+bind-key 4C-9            group-toggle-9
+bind-key 4C-0            group-toggle-10
 
-bind 4-1           grouponly1
-bind 4-2           grouponly2
-bind 4-3           grouponly3
-bind 4-4           grouponly4
-bind 4-5           grouponly5
-bind 4-6           grouponly6
-bind 4-7           grouponly7
-bind 4-8           grouponly8
-bind 4-9           grouponly9
-bind 4-0           grouponly10
+bind-key 4-1             group-only-1
+bind-key 4-2             group-only-2
+bind-key 4-3             group-only-3
+bind-key 4-4             group-only-4
+bind-key 4-5             group-only-5
+bind-key 4-6             group-only-6
+bind-key 4-7             group-only-7
+bind-key 4-8             group-only-8
+bind-key 4-9             group-only-9
+bind-key 4-0             group-only-10
 
-bind 4S-1          movetogroup1
-bind 4S-2          movetogroup2
-bind 4S-3          movetogroup3
-bind 4S-4          movetogroup4
-bind 4S-5          movetogroup5
-bind 4S-6          movetogroup6
-bind 4S-7          movetogroup7
-bind 4S-8          movetogroup8
-bind 4S-9          movetogroup9
-bind 4S-0          movetogroup10
+bind-key 4S-1            window-movetogroup-1
+bind-key 4S-2            window-movetogroup-2
+bind-key 4S-3            window-movetogroup-3
+bind-key 4S-4            window-movetogroup-4
+bind-key 4S-5            window-movetogroup-5
+bind-key 4S-6            window-movetogroup-6
+bind-key 4S-7            window-movetogroup-7
+bind-key 4S-8            window-movetogroup-8
+bind-key 4S-9            window-movetogroup-9
+bind-key 4S-0            window-movetogroup-10
 
-bind 4-Tab         cycle
-bind 4S-Tab        rcycle
-bind 4-q           delete
-bind 4-x           raise
-bind 4-z           lower
-bind 4-KP_Begin    maximize
-bind 4-m           maximize
-bind 4S-m          hmaximize
-bind 4C-m          vmaximize
-bind 4S-t          htile
-bind 4C-t          vtile
+bind-key 4-Tab           window-cycle
+bind-key 4S-Tab          window-rcycle
+bind-key 4-q             window-delete
+bind-key 4-x             window-raise
+bind-key 4-z             window-lower
+bind-key 4-KP_Begin      window-maximize
+bind-key 4-m             window-maximize
+bind-key 4S-m            window-hmaximize
+bind-key 4C-m            window-vmaximize
+bind-key 4S-t            window-htile
+bind-key 4C-t            window-vtile
 
-bind 4S-h          moveleft
-bind 4S-j          movedown
-bind 4S-k          moveup
-bind 4S-l          moveright
+bind-key 4S-h            window-move-left
+bind-key 4S-j            window-move-down
+bind-key 4S-k            window-move-up
+bind-key 4S-l            window-move-right
 
-bind 4-h           bigmoveleft
-bind 4-j           bigmovedown
-bind 4-k           bigmoveup
-bind 4-l           bigmoveright
+bind-key 4-h             window-move-left-big
+bind-key 4-j             window-move-down-big
+bind-key 4-k             window-move-up-big
+bind-key 4-l             window-move-right-big
 
-bind 4C-h          resizeleft
-bind 4C-j          resizedown
-bind 4C-k          resizeup
-bind 4C-l          resizeright
+bind-key 4C-h            window-resize-left
+bind-key 4C-j            window-resize-down
+bind-key 4C-k            window-resize-up
+bind-key 4C-l            window-resize-right
 
-# mousebinds
-mousebind 4-1      window_move
-mousebind 4-2      window_lower
-mousebind 4-3      window_resize
-
-bind C-Left        unmap
-bind C-Right       unmap
-bind C-Down        unmap
-bind C-Up          unmap
-bind CS-Left       unmap
-bind CS-Right      unmap
-bind CS-Down       unmap
-bind CS-Up         unmap
-
-bind M-Left        unmap
-bind M-Right       unmap
-bind M-Down        unmap
-bind M-Up          unmap
-bind MS-Left       unmap
-bind MS-Right      unmap
-bind MS-Down       unmap
-bind MS-Up         unmap
-
-bind M-h           unmap
-bind M-l           unmap
-bind M-j           unmap
-bind M-k           unmap
-bind MS-h          unmap
-bind MS-l          unmap
-bind MS-j          unmap
-bind MS-k          unmap
+# mousemaps
+bind-mouse 4-1           window-move
+bind-mouse 4-2           window-lower
+bind-mouse 4-3           window-resize
 
 # menu
 command "term"     "konsole"
