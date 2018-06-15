@@ -62,7 +62,7 @@ rofi.location:           2
 rofi.padding:            4
 rofi.fullscreen:         false
 rofi.sidebar-mode:       true
-rofi.terminal:           konsole
+rofi.terminal:           gnome-terminal
 rofi.matching:           regex
 
 rofi.color-enabled: true
