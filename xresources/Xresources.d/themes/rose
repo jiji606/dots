@@ -1,0 +1,45 @@
+! vim: set filetype=xdefaults :
+
+! special
+*foreground:  #E5E5E5
+*background:  #101010
+*cursorColor: #FFF9EC
+
+! black
+*color0:      #121212
+*color8:      #2E3436
+
+! red
+*color1:      #A35B66
+*color9:      #AB6B74
+
+! green
+*color2:      #99AB6F
+*color10:     #ACB792
+
+! yellow
+*color3:      #394A3A
+*color11:     #425143
+
+! blue
+*color4:      #AB2C28
+*color12:     #B2433F
+
+! magenta
+*color5:      #3F2D32
+*color13:     #5E4B50
+
+! cyan
+*color6:      #839191
+*color14:     #98A4A4
+
+! white
+*color7:      #EEEEEE
+*color15:     #E5E5E5
+
+!                  !bg      !border  !sep
+rofi.color-window: #121212, #2E3436, #383838
+!                  !bg      !fg      !bgalt   !hlbg    !hlfg
+rofi.color-normal: #1D1D1D, #A35B66, #121212, #2E3436, #A35B66
+rofi.color-urgent: #1D1D1D, #A35B66, #121212, #2E3436, #495D6E
+rofi.color-active: #1D1D1D, #A35B66, #121212, #2E3436, #CA9733
