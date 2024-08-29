@@ -1,5 +1,5 @@
-urxvt.font: xft:Iosevka:style:Regular:size=10
-urxvt.italicFont: xft:Iosevka:style:Regular:size=10
-urxvt.boldItalicFont: xft:Iosevka:style:Regular:size=10
+urxvt.font: xft:Jetbrains Mono:style:Regular:size=14
+urxvt.italicFont: xft:Jetbrains Mono:style:Regular:size=14
+urxvt.boldItalicFont: xft:Jetbrains Mono:style:Regular:size=14
 
-st.font: Iosevka:pixelsize=17:antialias=true:autohint=true:style=regular
+st.font: Jetbrains Mono:pixelsize=17:antialias=true:autohint=true:style=regular

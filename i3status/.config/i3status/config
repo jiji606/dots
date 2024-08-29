@@ -1,27 +1,27 @@
 general {
-	separator       = " │ "
-	output_format   = "none"
-	colors          = false
+	separator       = "|"
+	output_format   = "i3bar"
 	color_separator = "#e1e1e2"
-	color_good      = "#17ad83"
-	color_degraded  = "#d65407"
-	color_bad       = "#2e2a31"
+	color_good      = "#00ff00"
+	color_degraded  = "#ffffff"
+	color_bad       = "#ff0000"
 	interval        = 5
 }
 
+order += "ethernet tun0"
+order += "ethernet remote-k8s"
 order += "volume master"
 order += "load"
-order += "ethernet eno1"
-order += "ethernet br0"
-order += "wireless wlp3s0"
-order += "disk /"
+# order += "ethernet eno1"
+# order += "wireless wlp60s0"
+# order += "disk /"
 order += "battery 0"
 order += "time"
-
 
 ethernet eno1 {
 	format_up   = "eno1: %ip"
 	format_down = "eno1: down"
+	separator_block_width = 18
 }
 
 ethernet br0 {
@@ -29,13 +29,26 @@ ethernet br0 {
 	format_down = "br0: down"
 }
 
-wireless wlp3s0 {
-	format_up   = "wlp3s0: %ip@%essid"
-	format_down = "wlp3s0: down"
+ethernet tun0 {
+	format_up   = "erli: up"
+	format_down = "erli: down"
+	separator_block_width = 18
+}
+
+ethernet remote-k8s {
+	format_up   = "remoteDev: up"
+	format_down = "remoteDev: down"
+	separator_block_width = 18
+}
+
+wireless wlp60s0 {
+	format_up   = "wifi: %ip@%essid"
+	format_down = "wifi: down"
 }
 
 disk "/" {
 	format = "root: %free"
+	separator_block_width = 18
 }
 
 disk "/home" {
@@ -44,9 +57,11 @@ disk "/home" {
 
 time {
 	format = "%Y-%m-%d %H:%M"
+	separator_block_width = 18
 }
 
 load {
+	separator_block_width = 18
 	format = "load: %1min %5min %15min"
 }
 
@@ -54,11 +69,13 @@ volume master {
 	format       = "volume: %volume"
 	format_muted = "volume: muted"
 	device       = "pulse"
+	separator_block_width = 18
 }
 
 battery 0 {
-	format        = "%status %percentage %remaining %emptytime"
+	format        = "bat: %status %percentage %remaining %emptytime"
 	format_down   = "No battery"
 	path          = "/sys/class/power_supply/BAT%d/uevent"
 	low_threshold = 10
+	separator_block_width = 18
 }

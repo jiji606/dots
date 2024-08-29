@@ -1,11 +1,11 @@
 [global]
-	font = "ypn envypn 10"
+	font = "Jetbrains Mono 16"
 	markup = yes
 	format = "%i %a\n<b>%s</b>\n%b"
 	sort = yes
 	indicate_hidden = true
 	word_wrap = yes
-	geometry = "300x10-50+60"
+	geometry = "550x10-60+100"
 	follow = mouse
 	sticky_history = yes
 	history_length = 20
@@ -17,8 +17,8 @@
 	dmenu = /usr/bin/dmenu -p dunst:
 	browser = /usr/bin/chromium
 	icon_position = off
-	frame_width = 1
-	frame_color = "#cf6a4c"
+	frame_width = 2
+#	frame_color = "#285577"
 
 [play_sound]
 	summary = "*"
@@ -30,17 +30,35 @@
 	history = ctrl+grave
 	context = ctrl+shift+period
 
+# [urgency_low]
+# 	background = "#000000"
+# 	foreground = "#dddddd"
+# 	timeout = 5
+# 
+# [urgency_normal]
+# 	background = "#000000"
+# 	foreground = "#ffffff"
+# 	timeout = 5
+# 
+# [urgency_critical]
+# 	background = "#285577"
+# 	foreground = "#ffffff"
+# 	timeout = 0
+# 
+# TokyoNight colors for dunst
+# For more configuration options see https://github.com/dunst-project/dunst/blob/master/dunstrc
+
 [urgency_low]
-	background = "#121212"
-	foreground = "#adadad"
-	timeout = 5
+    background = "#16161e"
+    foreground = "#c0caf5"
+    frame_color = "#c0caf5"
 
 [urgency_normal]
-	background = "#121212"
-	foreground = "#cf6a4c"
-	timeout = 5
+    background = "#1a1b26"
+    foreground = "#c0caf5"
+    frame_color = "#c0caf5"
 
 [urgency_critical]
-	background = "#cf6a4c"
-	foreground = "#121212"
-	timeout = 0
+    background = "#292e42"
+    foreground = "#db4b4b"
+    frame_color = "#db4b4b"

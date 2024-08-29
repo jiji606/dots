@@ -1,170 +1,305 @@
-exec dunst
-exec xrdb ~/Xresources.d/Xresources
-exec redshift
-exec nitrogen --restore
-exec export LANG=pl_PL.UTF-8
-exec export XDG_CURRENT_DESKTOP=KDE
-exec xset fp+ ~/.fonts
-exec xset fp rehash
-exec setxkbmap -layout pl,us
-exec xmodmap .Xmodmap &
-exec xsetroot -cursor_name left_ptr
-exec xbanish
-exec mpd
-exec compton
-
-
 set $mod Mod4
 
-new_window normal
+# new_window normal
+# default_border pixel
+# default_floating_border pixel 3
+# border pixel 2
 for_window [class="^.*"] border normal 1
+default_border pixel 1
 
-#font pango:Envy Code R 10
-font pango:Iosevka 10
-#font -*-snap-*-*-*-*-*-*-*-*-*-*-*-*
+
+# font pango:Envy Code R 10
+# font pango:Terminus 14
+font pango:Jetbrains Mono Bold 12
+# font -*-snap-*-*-*-*-*-*-*-*-*-*-*-*
 
 floating_modifier $mod
-#smart_borders off
 workspace_auto_back_and_forth yes
 force_display_urgency_hint 1000 ms
 focus_on_window_activation urgent
 show_marks yes
 
-bindsym $mod+Return exec konsole
-bindsym $mod+e exec /home/common/scripts/lock -p
-bindsym XF86AudioRaiseVolume exec amixer set Master 5000+ ; exec pkill -RTMIN+10 i3blocks
-bindsym XF86AudioLowerVolume exec amixer set Master 5000- ; exec pkill -RTMIN+10 i3blocks
-bindsym XF86AudioMute exec amixer set Master toggle ; exec pkill -RTMIN+10 i3blocks
-bindsym XF86AudioPlay exec mpc toggle
-bindsym XF86AudioNext exec mpc next
-bindsym XF86AudioPrev exec mpc prev
-bindsym XF86AudioStop exec mpc stop
-
 gaps outer 10
-gaps inner 5
+gaps inner 10
 
-
-bindsym $mod+q kill
-
-bindsym $mod+h focus left
-bindsym $mod+j focus down
-bindsym $mod+k focus up
-bindsym $mod+l focus right
-
-bindsym $mod+Shift+h move left
-bindsym $mod+Shift+j move down
-bindsym $mod+Shift+k move up
-bindsym $mod+Shift+l move right
-
-bindsym $mod+c split v
-
-bindsym $mod+v split h
-
-bindsym $mod+f fullscreen toggle
-bindsym $mod+Shift+space floating toggle
-
-bindsym $mod+space focus mode_toggle
-
-bindsym $mod+z focus parent
-
-set $workspace1 1:web
-set $workspace2 2:dev
-set $workspace3 3:irc
+set $workspace1 1
+set $workspace2 2
+set $workspace3 3
 set $workspace4 4
 set $workspace5 5
 set $workspace6 6
 set $workspace7 7
 set $workspace8 8
 set $workspace9 9
-set $workspace10 10:slack
+set $workspace10 10
 
-bindsym $mod+1 workspace $workspace1
-bindsym $mod+2 workspace $workspace2
-bindsym $mod+3 workspace $workspace3
-bindsym $mod+4 workspace $workspace4
-bindsym $mod+5 workspace $workspace5
-bindsym $mod+6 workspace $workspace6
-bindsym $mod+7 workspace $workspace7
-bindsym $mod+8 workspace $workspace8
-bindsym $mod+9 workspace $workspace9
-bindsym $mod+0 workspace $workspace10
+bindsym $mod+Return          exec "/home/julia/.cargo/bin/alacritty"
+bindsym $mod+e               exec "/home/common/scripts/lock -p"
+bindsym XF86AudioRaiseVolume exec "pactl                     set-sink-volume @DEFAULT_SINK@ +10%"
+bindsym XF86AudioLowerVolume exec "pactl                     set-sink-volume @DEFAULT_SINK@ -10%"
+bindsym XF86AudioMute        exec "pactl                     set-sink-mute   @DEFAULT_SINK@ toggle"
+bindsym XF86AudioPlay        exec "playerctl                 play-pause"
+bindsym XF86AudioNext        exec "playerctl                 next"
+bindsym XF86AudioForward     exec "playerctl                 next"
+bindsym XF86AudioRewind      exec "playerctl                 previous"
+bindsym XF86AudioStop        exec "playerctl                 stop"
 
-bindsym $mod+Shift+1 move container to workspace $workspace1
-bindsym $mod+Shift+2 move container to workspace $workspace2
-bindsym $mod+Shift+3 move container to workspace $workspace3
-bindsym $mod+Shift+4 move container to workspace $workspace4
-bindsym $mod+Shift+5 move container to workspace $workspace5
-bindsym $mod+Shift+6 move container to workspace $workspace6
-bindsym $mod+Shift+7 move container to workspace $workspace7
-bindsym $mod+Shift+8 move container to workspace $workspace8
-bindsym $mod+Shift+9 move container to workspace $workspace9
-bindsym $mod+Shift+0 move container to workspace $workspace10
 
-bindsym $mod+Shift+c reload
-bindsym $mod+Shift+r restart
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+w           kill
+
+bindsym $mod+h           focus      left
+bindsym $mod+j           focus      down
+bindsym $mod+k           focus      up
+bindsym $mod+l           focus      right
+
+bindsym $mod+Shift+h     move       left
+bindsym $mod+Shift+j     move       down
+bindsym $mod+Shift+k     move       up
+bindsym $mod+Shift+l     move       right
+
+bindsym $mod+c           split      v
+
+bindsym $mod+v           split      h
+
+bindsym $mod+f           fullscreen toggle
+bindsym $mod+Shift+space floating   toggle
+
+bindsym $mod+z           focus      parent
+
+bindsym $mod+1           workspace  $workspace1
+bindsym $mod+2           workspace  $workspace2
+bindsym $mod+3           workspace  $workspace3
+bindsym $mod+4           workspace  $workspace4
+bindsym $mod+5           workspace  $workspace5
+bindsym $mod+6           workspace  $workspace6
+bindsym $mod+7           workspace  $workspace7
+bindsym $mod+8           workspace  $workspace8
+bindsym $mod+9           workspace  $workspace9
+bindsym $mod+0           workspace  $workspace10
+
+bindsym $mod+Shift+1     move       container to workspace $workspace1
+bindsym $mod+Shift+2     move       container to workspace $workspace2
+bindsym $mod+Shift+3     move       container to workspace $workspace3
+bindsym $mod+Shift+4     move       container to workspace $workspace4
+bindsym $mod+Shift+5     move       container to workspace $workspace5
+bindsym $mod+Shift+6     move       container to workspace $workspace6
+bindsym $mod+Shift+7     move       container to workspace $workspace7
+bindsym $mod+Shift+8     move       container to workspace $workspace8
+bindsym $mod+Shift+9     move       container to workspace $workspace9
+bindsym $mod+Shift+0     move       container to workspace $workspace10
+
+bindsym $mod+Tab         workspace  back_and_forth
+
+bindsym $mod+Shift+c     reload
+bindsym $mod+Shift+r     restart
+bindsym $mod+Shift+e     exec       "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+
+# ERROR: CONFIG: Expected one of these tokens: 'class', 'instance', 'window_role', 'con_id', 'id', 'window_type', 'con_mark', 'title', 'urgent', 'workspace', 'machine', 'floating_from', 'tiling_from', 'tiling', 'floating', 'all', ']'
+
+assign [class="Spotify"]                              number 9
+assign [class="Code"]                                 number 3
+assign [title="Microsoft Teams"] number 10
 
 # resize mode
 bindsym $mod+u mode "resize"
 mode "resize" {
-	bindsym h resize grow left 10 px or 10 ppt
-	bindsym j resize grow down 10 px or 10 ppt
-	bindsym k resize grow up 10 px or 10 ppt
-	bindsym l resize grow right 9 px or 10 ppt
-	bindsym Shift+h resize shrink right 10 px or 10 ppt
-	bindsym Shift+j resize shrink up 10 px or 10 ppt
-	bindsym Shift+k resize shrink down 10 px or 10 ppt
-	bindsym Shift+l resize shrink left 0 px or 10 ppt
-	bindsym Return mode "default"
-	bindsym Escape mode "default"
+	bindsym h            resize grow   left  10 px or 10 ppt
+	bindsym j            resize grow   down  10 px or 10 ppt
+	bindsym k            resize grow   up    10 px or 10 ppt
+	bindsym l            resize grow   right 10 px or 10 ppt
+	bindsym Ctrl+h       resize grow   left  5  px or 5  ppt
+	bindsym Ctrl+j       resize grow   down  5  px or 5  ppt
+	bindsym Ctrl+k       resize grow   up    5  px or 5  ppt
+	bindsym Ctrl+l       resize grow   right 5  px or 5  ppt
+	bindsym Shift+h      resize shrink right 10 px or 10 ppt
+	bindsym Shift+j      resize shrink up    10 px or 10 ppt
+	bindsym Shift+k      resize shrink down  10 px or 10 ppt
+	bindsym Shift+l      resize shrink left  10 px or 10 ppt
+	bindsym Ctrl+Shift+h resize shrink right 5  px or 5  ppt
+	bindsym Ctrl+Shift+j resize shrink up    5  px or 5  ppt
+	bindsym Ctrl+Shift+k resize shrink down  5  px or 5  ppt
+	bindsym Ctrl+Shift+l resize shrink left  5  px or 5  ppt
+	bindsym Return       mode   "default"
+	bindsym Escape       mode   "default"
 }
 
 # layout mode
 bindsym $mod+d mode "layout"
 mode "layout" {
-	bindsym f fullscreen toggle
-	bindsym s layout stacking
-	bindsym t layout tabbed
-	bindsym v layout splith
-	bindsym h layout splitv
-	bindsym l floating toggle
-	bindsym Escape mode "default"
+	bindsym f      fullscreen toggle
+	bindsym s      layout     stacking
+	bindsym t      layout     tabbed
+	bindsym v      layout     splith
+	bindsym h      layout     splitv
+	bindsym l      floating   toggle
+	bindsym Escape mode       "default"
 }
 
 # launcher mode
+bindsym $mod+space exec rofi -show drun
 bindsym $mod+r mode "launch"
 mode "launch" {
-	bindsym +r exec rofi -show run ; mode "default"
-	bindsym +s exec rofi -show ssh ; mode "default"
-	bindsym +d exec rofi -show drun ; mode "default"
-	bindsym +w exec rofi -show window ; mode "default"
+	bindsym +r     exec rofi -show run    ; mode "default"
+	bindsym +s     exec rofi -show ssh    ; mode "default"
+	bindsym +d     exec rofi -show drun   ; mode "default"
+	bindsym +w     exec rofi -show window ; mode "default"
 	bindsym Escape mode "default"
 }
 
-# client class          border  backgr. text    indic.  child_b
-client.focused          #829cd3 #000000aa #e8e8e8 #597bc5 #829cd3
-client.focused_inactive #202020 #000000aa #e8e8e8 #6c6c6c #202020
-client.unfocused        #202020 #000000aa #6c6c6c #6c6c6c #202020
-client.urgent           #f22e2e #dd7664aa #ffffff #6c6c6c #f22e2e
+# set $fujiWhite     #DCD7BA
+# set $oldWhite      #C8C093
+# set $sumiInk0      #16161D
+# set $sumiInk1      #1F1F28
+# set $sumiInk2      #2A2A37
+# set $sumiInk3      #363646
+# set $sumiInk4      #54546D
+# set $waveBlue1     #223249
+# set $waveBlue2     #2D4F67
+# set $winterGreen   #2B3328
+# set $winterYellow  #49443C
+# set $winterRed     #43242B
+# set $winterBlue    #252535
+# set $autumnGreen   #76946A
+# set $autumnRed     #C34043
+# set $autumnYellow  #DCA561
+# set $samuraiRed    #E82424
+# set $roninYellow   #FF9E3B
+# set $waveAqua1     #6A9589
+# set $dragonBlue    #658594
+# set $fujiGray      #727169
+# set $springViolet1 #938AA9
+# set $oniViolet     #957FB8
+# set $crystalBlue   #7E9CD8
+# set $springViolet2 #9CABCA
+# set $springBlue    #7FB4CA
+# set $lightBlue     #A3D4D5
+# set $waveAqua2     #7AA89F
+# set $springGreen   #98BB6C
+# set $boatYellow1   #938056
+# set $boatYellow2   #C0A36E
+# set $carpYellow    #E6C384
+# set $sakuraPink    #D27E99
+# set $waveRed       #E46876
+# set $peachRed      #FF5D62
+# set $surimiOrange  #FFA066
+# set $katanaGray    #717C7C
+# set $charcoal      #343939
+# set $dragon        #181616
 
-client.background #1d1d1d
+# #client-class           border        background text       indicator  child_border
+# client.focused          $waveBlue2    $waveBlue1 $fujiWhite $waveBlue2 $waveBlue2
+# client.focused_inactive $winterYellow $charcoal  $fujiWhite $charcoal  $charcoal
+# client.unfocused        $winterYellow $dragon    $fujiWhite $dragon    $winterYellow
+# client.urgent           $peachRed     $waveRed   $fujiWhite $peachRed  $peachRed
+# client.background       $dragon
 
-bar {
-	colors {
-		background         #00000033
-		statusline         #6c6c6c
-		focused_workspace  #000000 #151515 #597bc5
-		active_workspace   #000000 #101010 #829cd3
-		inactive_workspace #000000 #101010 #6c6c6c
-		urgent_workspace   #000000 #f22e2e #e8e8d3
-	}
-	height 22
-	tray_output none
-	position bottom
-	i3bar_command i3bar -t
-	status_command i3blocks
-	font pango:Iosevka 10
-	#font pango:Envy Code R 10
-	#font -*-snap-*-*-*-*-*-*-*-*-*-*-*-*
-}
+set $bg #1a1b26
+set $bg_dark #16161e
+set $bg_float #16161e
+set $bg_highlight #292e42
+set $bg_popup #16161e
+set $bg_search #3d59a1
+set $bg_sidebar #16161e
+set $bg_statusline #16161e
+set $bg_visual #283457
+set $black #15161e
+set $blue #7aa2f7
+set $blue0 #3d59a1
+set $blue1 #2ac3de
+set $blue2 #0db9d7
+set $blue5 #89ddff
+set $blue6 #b4f9f8
+set $blue7 #394b70
+set $border #15161e
+set $border_highlight #27a1b9
+set $comment #565f89
+set $cyan #7dcfff
+set $dark3 #545c7e
+set $dark5 #737aa2
+set $add #20303b
+set $change #1f2231
+set $delete #37222c
+set $text #394b70
+set $error #db4b4b
+set $fg #c0caf5
+set $fg_dark #a9b1d6
+set $fg_float #c0caf5
+set $fg_gutter #3b4261
+set $fg_sidebar #a9b1d6
+set $add #449dab
+set $change #6183bb
+set $delete #914c54
+set $ignore #545c7e
+set $green #9ece6a
+set $green1 #73daca
+set $green2 #41a6b5
+set $hint #1abc9c
+set $info #0db9d7
+set $magenta #bb9af7
+set $magenta2 #ff007c
+set $orange #ff9e64
+set $purple #9d7cd8
+set $red #f7768e
+set $red1 #db4b4b
+set $teal #1abc9c
+set $terminal_black #414868
+set $todo #7aa2f7
+set $warning #e0af68
 
+set $focused-border #7aa2f7
+set $focused-background #414868
+set $focused-text #c0caf5
+set $focused-indicator #7aa2f7
+set $focused-child-border #7aa2f7
+
+set $finactive-border #283457
+set $finactive-background #292e42
+set $finactive-text #7aa2f7
+set $finactive-indicator #283457
+set $finactive-child-border #283457
+
+set $unfocused-border #292e42
+set $unfocused-background #16161e
+set $unfocused-text #7aa2f7
+set $unfocused-indicator #292e42
+set $unfocused-child-border #292e42
+
+set $urgent-border #f7768e
+set $urgent-background #db4b4b
+set $urgent-text #c0caf5
+set $urgent-indicator #f7768e
+set $urgent-child-border #f7768e
+
+set $background #15161e
+
+#client-class           border        background text       indicator  child_border
+client.focused          $focused-border   $focused-background   $focused-text   $focused-indicator    $focused-child-border
+client.focused_inactive $finactive-border $finactive-background $finactive-text $finactive-indicator  $finactive-child-border
+client.unfocused        $unfocused-border $unfocused-background $unfocused-text $unfocused-indicator  $unfocused-child-border
+client.urgent           $urgent-border    $urgent-background    $urgent-text    $urgent-indicator     $urgent-child-border
+client.background       $background
+
+# bar {
+#
+# 	colors {
+# 		background         $background
+# 		statusline         $focused-text
+# 		focused_workspace  $focused-border   $focused-background   $focused-text
+# 		active_workspace   $finactive-border $finactive-background $finactive-text
+# 		inactive_workspace $unfocused-border $unfocused-background $unfocused-text
+# 		urgent_workspace   $urgent-border    $urgent-background    $urgent-text
+# 	}
+#
+# 	height         32
+# 	tray_output    primary
+# 	position       top
+# 	i3bar_command  i3bar -t
+# 	status_command i3blocks
+# 	font           pango:Jetbrains Mono 16
+#
+# 	# tray_padding 4
+# 	# font pango:Terminus 14
+# 	# font pango:Envy Code R 10
+# 	# font -*-snap-*-*-*-*-*-*-*-*-*-*-*-*
+# }
+#
